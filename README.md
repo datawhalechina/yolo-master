@@ -1,5 +1,8 @@
 # Yolo Master
 
+![image](https://github.com/user-attachments/assets/f23752e3-e440-4fd6-a2ee-33b64bdc6544)
+
+
 *这里写项目的各类介绍信息、背景、动机等内容*
 
 - 本课程主要对yolo系列模型进行介绍，包括各版本模型的结构，进行的改进等
@@ -7,6 +10,8 @@
 - 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，transformer等squence model之前的位置
 
 - 本课程旨在帮助学习者们可以了解和掌握主要yolo模型的发展脉络，以期在各自的应用领域可以进一步创新并在自己的任务上达到较好的效果。
+
+- [飞书白皮书规划文档](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg?from=from_copylink)
 
 ## 项目受众
 
