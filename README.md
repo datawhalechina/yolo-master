@@ -13,6 +13,9 @@
 
 - [飞书白皮书规划文档](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg?from=from_copylink)
 
+![image](https://github.com/user-attachments/assets/bf9653ac-4a42-4e6e-b0f2-4455a90c0fb1)
+
+
 ## 项目受众
 
 - 本课程面向有一定的机器学习基础的，上过deep learning课程的学生或者研究者
