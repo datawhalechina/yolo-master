@@ -8,9 +8,15 @@
 import os
 import glob
 import shutil
+import math
+import os
+import random
+import cv2
+import yaml
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
-import numpy as np
 
 
 def cut_data(data_dir, out_dir, keep_classes, setname='train'):
@@ -54,9 +60,6 @@ def cut_data(data_dir, out_dir, keep_classes, setname='train'):
 
     print("筛选和映射完成！获得{}张图片，位于:{}".format(counter, out_dir))
 
-from collections import defaultdict
-
-
 
 def count_classes_in_file(label_path):
     """
@@ -67,6 +70,7 @@ def count_classes_in_file(label_path):
     with open(label_path, "r") as f:
         lines = f.readlines()
     return [int(line.split()[0]) for line in lines if line.strip()]
+
 
 def count_classes_in_files(label_files):
     """
@@ -81,6 +85,7 @@ def count_classes_in_files(label_files):
             class_ids.extend(result)
     return class_ids
 
+
 def print_yolo_dataset_info(dataset_path):
     """
     打印YOLO数据集的基本信息
@@ -93,7 +98,8 @@ def print_yolo_dataset_info(dataset_path):
     labels_val_path = os.path.join(dataset_path, "labels", "val")
 
     # 检查路径是否存在
-    if not all(os.path.exists(path) for path in [images_train_path, images_val_path, labels_train_path, labels_val_path]):
+    if not all(
+            os.path.exists(path) for path in [images_train_path, images_val_path, labels_train_path, labels_val_path]):
         print("错误：数据集目录结构不符合YOLO格式！")
         print([images_train_path, images_val_path, labels_train_path, labels_val_path])
         return
@@ -127,12 +133,6 @@ def print_yolo_dataset_info(dataset_path):
     print("类别分布：")
     for class_id, count in sorted(class_counts.items()):
         print(f"  类别 {class_id}: {count} 个实例")
-
-import math
-import os
-import random
-import cv2
-
 
 
 def parse_annotation(annotation_path):
@@ -173,7 +173,6 @@ def visualize_random_images(yolo_data_dir, setname='train', num_images=4):
     images_dir = os.path.join(yolo_data_dir, 'images', setname)  # 图片路径
     labels_dir = os.path.join(yolo_data_dir, 'labels', setname)  # 标签路径
 
-
     # 获取所有图像文件名
     labels_files = [f for f in os.listdir(labels_dir) if f.endswith('.txt')]
     selected_images = random.sample(labels_files, min(num_images, len(labels_files)))  # 随机选择图像
@@ -211,7 +210,6 @@ def visualize_random_images(yolo_data_dir, setname='train', num_images=4):
     plt.show()
 
 
-import yaml
 def check_yolo_yaml_paths(yaml_path):
     """
     检查YOLO YAML文件中的路径是否存在
@@ -257,8 +255,7 @@ def check_yolo_yaml_paths(yaml_path):
                 print(f"警告!：路径 '{abs_path}'!!")
                 print(f"警告!：路径 '{abs_path}'!!!")
 
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
+
 def visualize_yolo_logs(log_dir, setname='train'):
     """
     可视化 YOLO 训练日志中的图片文件
