@@ -2,8 +2,8 @@
 """
 # @file name  : c_data_downsample.py
 # @author     : https://github.com/TingsongYu
-# @date       :
-# @brief      :
+# @date       : 2025年1月15日
+# @brief      : 对数据集进行下采样，减少图片数量
 """
 
 import os
