@@ -1,4 +1,50 @@
-# 更新日志
+# YoLo Master
+
+![image](https://github.com/user-attachments/assets/f23752e3-e440-4fd6-a2ee-33b64bdc6544)
+
+## Hacking YoLo with ultralytics
+
+### 项目结构
+```
+.
+├── C1 主干（Backbone）
+│   ├── 1-RepViT
+│   ├── 10-CSwinTransformer
+│   ├── 2-Starnet
+│   ├── 3-EfficientViT
+│   ├── 4-FasterNet
+│   ├── 5-ConvNeXtV2
+│   ├── 6-EfficientFormerV2
+│   ├── 7-LSKNet
+│   ├── 8-SwinTransformer
+│   └── 9-VanillaNet
+├── C2 颈部（Neck）
+│   └── 1-GFPN
+├── C3 头部（Head）
+│   └── 1-DyHead
+├── C4 注意力机制（Attention）
+│   ├── 1-CBAM
+│   ├── 2-SE
+│   └── 注意力机制使用说明.md
+├── C6 其他
+│   ├── 上下采样模块
+│   └── 卷积模块
+├── Images
+└── README.md
+```
+
+
+### 飞书教程
+
+- [YOLO系列魔改教程](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX?from=from_copylink)
+
+
+
+###  本节参考资料
+
+
+
+## 更新日志
 
 
 1. 2024-12-28 更新
