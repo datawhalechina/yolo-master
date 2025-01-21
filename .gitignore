@@ -1,0 +1,14 @@
+# 忽略数据集文件夹
+Pytorch_YoLo_From_Scratch/datasets/coco8
+Pytorch_YoLo_From_Scratch/datasets/coco128
+
+
+# 忽略pycache文件夹
+*/__pycache__
+Pytorch_YoLo_From_Scratch/v3/__pycache__
+
+# 忽略lightning_logs文件夹
+*/v3/lightning_logs
+*/v3/logs
+Pytorch_YoLo_From_Scratch/v3/lightning_logs/version_0
+Pytorch_YoLo_From_Scratch/v3/logs
