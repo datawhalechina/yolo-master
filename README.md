@@ -1,8 +1,10 @@
-# YoLo Master
+# YOLO Master
 
 ![image](https://github.com/user-attachments/assets/f23752e3-e440-4fd6-a2ee-33b64bdc6544)
 
-- 本课程主要对yolo系列模型进行介绍，包括各版本模型的结构，进行的改进等
+## 项目简介
+
+- 本项目主要对yolo系列模型进行介绍，包括各版本模型的结构，进行的改进等
 
 - 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，transformer等squence model之前的位置
 
@@ -12,7 +14,18 @@
 
 - [内测文档](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh?from=from_copylink) 
 
-![image](https://github.com/user-attachments/assets/bf9653ac-4a42-4e6e-b0f2-4455a90c0fb1)
+![image](./Images/Main_README/Image_1.png)
+
+- **目录结构说明**
+
+  Hacking_Yolo: YOLO系列模型魔改教程
+
+  Hands_on_YoLo_with_ultralytics: YOLO系列模型应用教程
+
+  Images: 项目图片
+
+  Pytorch_YoLo_From_Scratch: YOLO系列模型从零开始实现教程
+
 
 
 ## 项目受众
@@ -24,37 +37,78 @@
 
 ## 目录
 
+### 第一部分 YOLO 全系列模型详解 ###
 
+1. [YOLOv1-YOLO11概述](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd?from=from_copylink) 
 
-*这里写你的项目目录，已完成的部分用添加上跳转链接*
-- [第1章](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter1/chapter1.md)
-- [第2章](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2)
-  - [2.1 我是2.1的标题](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2/chapter2_1.md)
-  - [2.2 我是2.2的标题](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2/chapter2_2.md)
-- [第3章](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter3)
-  - [3.1 我是3.1的标题](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter3/chapter3_1)
-    - [3.1.1 我是3.1.1的标题](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter3/chapter3_1/chapter3_1_1.md)
-    - [3.1.2 我是3.1.2的标题](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter3/chapter3_1/chapter3_1_2.md)
-  - 3.2 我是3.2的标题
-- 第4章
-  - 4.1 我是4.1的标题
-  - 4.2 我是4.2的标题
+2. [YOLOv1详解](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf?from=from_copylink) @刘伟鸿
+
+3. [YOLOv2详解](https://wvet00aj34c.feishu.cn/docx/OHEhdwqXYoe8LIxwkRWcG0FLnnf?from=from_copylink) @蔡鋆捷
+
+4. [YOLOv3详解](https://wvet00aj34c.feishu.cn/docx/U1e2dVfN3oFMUcxqkTWcNrNEnHr?from=from_copylink) @蔡鋆捷 @程宏
+
+5. [YOLOv4详解](https://wvet00aj34c.feishu.cn/docx/IqGJdDvXsoNIGBxLsEWcGQGNnng?from=from_copylink) @蔡鋆捷
+
+6. [YOLOv5详解](https://wvet00aj34c.feishu.cn/docx/CltUdiVfMoaSkXxGaTvcpAyWnWh?from=from_copylink) @蔡鋆捷
+
+7. [YOLOv6详解](https://wvet00aj34c.feishu.cn/docx/Clvbd8PDAoLD4Jx1Asdc6Afon0d?from=from_copylink) @陈国威
+
+8. [YOLOv7详解](https://wvet00aj34c.feishu.cn/docx/K5eCdF7fSohwvfxVpeIcF0ZLnK9?from=from_copylink) @蔡鋆捷
+
+9. [YOLOv8详解](https://ycnosmsebbdf.feishu.cn/docx/EqtRdOuy2oPnAkxkIE6cNhBsnwc?from=from_copylink) @蔡鋆捷 @程宏
+
+10. [YOLOv9详解](https://sxwqtaijh4.feishu.cn/docx/FRJ6dPhALoqyC7xhVP6cwgSVn4e?from=from_copylink) @陈国威
+
+11. [YOLOv10详解](https://wvet00aj34c.feishu.cn/docx/VagAdssMbo7a3exoagOcXr8BnAh?from=from_copylink) @陈国威
+
+12. [YOLO11详解](https://wvet00aj34c.feishu.cn/docx/ZUQ9d4LnmoYjv3xlBFTcprctnMg?from=from_copylink) @彭彩平
+
+13. [YOLO系列模型的研究者/开发者趣闻和谣言](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd#UAHidbJDkoPaiaxDwBGcq7qInsg) @ 张小白
+    
+    - YOLO之父
+
+    - YOLO的版本之争
+
+    - YOLO系列模型时间线
+
+### 第二部分 YOLO 全系列教程 ###
+
+1. [YOLO系列算法的数据集制作与整理](https://wvet00aj34c.feishu.cn/docx/Tdv4d2ZpmoWX4vxPPhfcvEIQnLh?from=from_copylink) @程宏
+
+2. YOLO系列实操教程 
+   1. YOLO系列入门教程 @程宏 @余霆嵩
+      1. [教程文档](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD?from=from_copylink)  
+      2. [教程代码](./Hands_on_YoLo_with_ultralytics\0-dog-breed-detection)
+
+   2. YOLO系列进阶教程 @程宏 @余霆嵩
+      1. [教程文档](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf?from=from_copylink)
+      2. [教程代码](./Hands_on_YoLo_with_ultralytics\1-DOTA-obb)
+
+   3. YOLO系列魔改教程 @白雪城 @谢彩承 @胡博毓
+      1. [教程文档](hhttps://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX?from=from_copylink)
+      2. [教程代码](./Hacking_YoLo)
+
+3. [YOLO系列模型从零开始实现教程](./Pytorch_YoLo_From_Scratch)  @ 
+
+4. YOLO系列模型的硬件部署 @张小白
 
 ## 贡献者名单
 
 | 姓名 | 职责 | 简介 |
 | :----| :---- | :---- |
 | [程宏](https://github.com/chg0901) | 项目负责人、发起者 | DataWhale意向成员 |
-| [余霆嵩]([https://github.com/](https://github.com/TingsongYu)) | 项目负责人 |  |
-| [蔡鋆捷](https://github.com/xinala-781) | 项目负责人 | datawhale意向成员  |
-| [白雪城](https://github.com/JackBaixue) | 项目负责人、发起者 |  |
-| [徐韵婉](https://github.com/) | 发起者、项目负责人 |  |
-| [刘伟鸿](https://github.com/Weihong-Liu) |V1详解，V1 Scratch | datawhale成员 |
-| [胡博毓](https://github.com/HuBoyu021124) | 魔改教程 | datawhale成员 |
-| 小红 | 第1章贡献者 | 小明的朋友 |
-| 小强 | 第2章贡献者 | 小明的朋友 |
+| [余霆嵩](https://github.com/TingsongYu)| 项目负责人 | DataWhale意向成员 |
+| [蔡鋆捷](https://github.com/xinala-781) | 项目负责人 | DataWhale意向成员 |
+| [白雪城](https://github.com/JackBaixue) | 项目负责人、发起者 | DataWhale成员 |
+| [徐韵婉](https://github.com/) | 项目负责人、发起者 | DataWhale成员 |
+| [刘伟鸿](https://github.com/Weihong-Liu) |V1详解，V1 Scratch | DataWhale成员 |
+| [胡博毓](https://github.com/HuBoyu021124) | 魔改教程 | DataWhale成员 |
+| [谢彩承](https://github.com/YoungBossX) | 魔改教程 |DataWhale意向成员 |
+| [张小白](https://www.zhihu.com/people/zhanghui_china) | YOLO系列模型趣闻和谣言， 硬件部署（香橙派AIPro实现YOLOv5）|DataWhale意向成员  |
+| [陈国威](https://github.com/gomevie) |  |DataWhale意向成员  |
+| [彭彩平](https://github.com/caipingpeng) | | |
+| [全政宇](https://github.com/EdQinHUST) | | DataWhale意向成员  |
 
-*注：表头可自定义，但必须在名单中标明项目负责人*
 
 ## 参与贡献
 
