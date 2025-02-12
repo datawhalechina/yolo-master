@@ -2,7 +2,13 @@
 
 ![image](https://github.com/user-attachments/assets/f23752e3-e440-4fd6-a2ee-33b64bdc6544)
 
-## YOLOv3 from scratch
+## YOLO Models from scratch
+
+本项目旨在采用**手撸YOLO模型**的方式，来带大家一起在**小型数据集上复现YOLO算法**，目前计划里打算对YOLO V1，[**V3**](./v3/YOLOv3_Hong.ipynb)，[**V5**](./v5/YOLOv5_NetModel.ipynb)，V8等进行手撸。
+
+我们计划首先编写一套可以共用的数据 pipeline ( dataset , dataloader ), 最终采取较为统一的基于torch的简单算法接口，并进行在关键通用数据集上的精度对齐。
+
+欢迎感兴趣的有算力的小伙伴加入我们, 一起手撸YOLO模型!!
 
 ### 项目结构
 ```
@@ -17,12 +23,27 @@
 │   ├── config.py
 │   └── metrics
 └── v5
+    ├── C3模块.png
+    ├── ConBNSiLU.png
+    ├── Conv2d模块.png
+    ├── SPPF.png
+    ├── Upsample模块.png
+    ├── YOLOv5.png
+    ├── YOLOv5_NetModel.ipynb
+    ├── bottleneck1.png
+    ├── bottleneck2.png
+    ├── coco8
+    └── readme.md
 ```
 
 
 ### 飞书教程
 
-【todo】
+【todo】飞书教程期待大家共建~
+
+---
+
+【以下为基于ultralytics的YOLO系列入门和进阶教程】
 
 - [0-dog-breed-detection YOLO系列**入门实操教程**](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD?from=from_copylink)
 
@@ -39,6 +60,7 @@
 
 - [YOLOv3-Object-Detection-from-Scratch](https://github.com/williamcfrancis/YOLOv3-Object-Detection-from-Scratch/blob/main/YOLO_object_detection.ipynb)
 - [YOLOv3-in-PyTorch](https://github.com/westerndigitalcorporation/YOLOv3-in-PyTorch/blob/release/src/model.py)
+- [coco128 in kaggle](https://www.kaggle.com/datasets/ultralytics/coco128)
 
 
 
