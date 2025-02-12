@@ -2,9 +2,6 @@
 
 ![image](https://github.com/user-attachments/assets/f23752e3-e440-4fd6-a2ee-33b64bdc6544)
 
-
-*这里写项目的各类介绍信息、背景、动机等内容*
-
 - 本课程主要对yolo系列模型进行介绍，包括各版本模型的结构，进行的改进等
 
 - 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，transformer等squence model之前的位置
@@ -13,16 +10,22 @@
 
 - [飞书白皮书规划文档](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg?from=from_copylink)
 
+- [内测文档](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh?from=from_copylink) 
+
 ![image](https://github.com/user-attachments/assets/bf9653ac-4a42-4e6e-b0f2-4455a90c0fb1)
 
 
 ## 项目受众
 
-- 本课程面向有一定的机器学习基础的，上过deep learning课程的学生或者研究者
+- 本课程面向有一定的机器学习基础的，上过**deep learning**和**图像图形学课程**的学生、工程师或者研究者
+- 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics](https://github.com/chg0901/yolo_master/tree/main/Hands_on_YoLo_with_ultralytics)** )
+- 期待**手动实现YOLO算法（[From Scratch](https://github.com/chg0901/yolo_master/tree/main/Pytorch_YoLo_From_Scratch)）** 的学习者，将**YOLO系列模型应用到所在领域数据或者提高表现（[Hacking](https://github.com/chg0901/yolo_master/tree/main/Hacking_YoLo)）** 的工程师，研究者
 
-*注：这里写你的项目所面向的受众，本项目能给他们带来什么，对他们的基础能力要求有哪些*
 
 ## 目录
+
+
+
 *这里写你的项目目录，已完成的部分用添加上跳转链接*
 - [第1章](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter1/chapter1.md)
 - [第2章](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2)
@@ -41,7 +44,13 @@
 
 | 姓名 | 职责 | 简介 |
 | :----| :---- | :---- |
-| 小明 | 项目负责人 | 一个理想主义者 |
+| [程宏](https://github.com/chg0901) | 项目负责人、发起者 | DataWhale意向成员 |
+| [余霆嵩]([https://github.com/](https://github.com/TingsongYu)) | 项目负责人 |  |
+| [蔡鋆捷](https://github.com/xinala-781) | 项目负责人 | datawhale意向成员  |
+| [白雪城](https://github.com/JackBaixue) | 项目负责人、发起者 |  |
+| [徐韵婉](https://github.com/) | 发起者、项目负责人 |  |
+| [刘伟鸿](https://github.com/Weihong-Liu) |V1详解，V1 Scratch | datawhale成员 |
+| [胡博毓](https://github.com/HuBoyu021124) | 魔改教程 | datawhale成员 |
 | 小红 | 第1章贡献者 | 小明的朋友 |
 | 小强 | 第2章贡献者 | 小明的朋友 |
 
