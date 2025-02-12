@@ -66,7 +66,7 @@
       2. [教程代码](./Hands_on_YoLo_with_ultralytics\1-DOTA-obb)
 
    3. YOLO系列算法**魔改**教程 @白雪城 @谢彩承 @胡博毓
-      1. [教程文档](hhttps://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)
+      1. [教程文档](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)
       2. [教程代码](./Hacking_YoLo)
 
 3. [YOLO系列算法从零开始实现教程](./Pytorch_YoLo_From_Scratch) @刘伟鸿 @程宏 @蔡鋆捷 
