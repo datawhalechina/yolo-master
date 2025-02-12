@@ -53,7 +53,7 @@
 
     （1）**RepViT (CVPR 2024)**
 
-     ![RepViT结构图](Images/RepViT.png)
+     ![RepViT结构图](../Images/HackingYOLO_README/RepViT.png)
 
     作者：Ao Wang, Hui Chen, Zijia Lin, Jungong Han, Guiguang Ding
 
@@ -65,7 +65,7 @@
 
     （2）**StarNet (CVPR 2024)**
 
-     ![StarNet结构图](Images/StarNet.png)
+     ![StarNet结构图](../Images/HackingYOLO_README/StarNet.png)
 
     作者：Xu Ma, Xiyang Dai, Yue Bai, Yizhou Wang, Yun Fu
 
@@ -78,7 +78,8 @@
 
     （3）**EfficientViT (CVPR 2023)**
 
-     ![EfficientViT结构图](Images/EfficientViT.png)
+     ![EfficientViT结构图](../Images/HackingYOLO_README/EfficientViT.png)
+     
     作者：Xinyu Liu, Houwen Peng, Ningxin Zheng, Yuqing Yang, Han Hu, Yixuan Yuan
 
     团队：The Chinese University of Hong Kong; Microsoft Research
@@ -90,7 +91,7 @@
 
     （4）**FasterNet (CVPR 2023)**
     
-    ![FasterNet结构图](Images/FasterNet.png)
+    ![FasterNet结构图](../Images/HackingYOLO_README/FasterNet.png)
 
     作者：Jierun Chen, Shiu-hong Kao, Hao He, Weipeng Zhuo, Song Wen, Chul-Ho Lee, S.-H. Gary Chan
 
@@ -103,7 +104,7 @@
 
     （5）**ConvNeXt V2**
 
-     ![ConvNeXt V2结构图](<Images/ConvNeXt V2.png>)
+     ![ConvNeXt V2结构图](<../Images/HackingYOLO_README/ConvNeXt V2.png>)
 
     作者：Sanghyun Woo, Shoubhik Debnath, Ronghang Hu, Xinlei Chen, Zhuang Liu, In So Kweon, Saining Xie
 
@@ -115,7 +116,7 @@
 
     （6）**Efficient Former V2 (ICCV 2023)**
 
-     ![Efficient Former V2结构图](<Images/Efficient Former V2.png>)
+     ![Efficient Former V2结构图](<../Images/HackingYOLO_README/Efficient Former V2.png>)
 
     作者：Yanyu Li, Geng Yuan, Yang Wen, Ju Hu, Georgios Evangelidis, Sergey Tulyakov, Yanzhi Wang, Jian Ren
 
@@ -127,7 +128,8 @@
     
 
     （7）**LSKNet (IJCV 2024 & ICCV 2023)**
-     ![LSKNet结构图](Images/LSKNet.png)
+
+     ![LSKNet结构图](../Images/HackingYOLO_README/LSKNet.png)
 
     作者：Yuxuan Li, Xiang Li, Yimian Dai, Qibin Hou, Li Liu, Yongxiang Liu, Ming-Ming Cheng, Jian Yang
 
@@ -140,7 +142,8 @@
     
     （8）**Swin Transformer**
 
-     ![Swin Transformer结构图](<Images/Swin Transformer.png>)
+     ![Swin Transformer结构图](<../Images/HackingYOLO_README/Swin Transformer.png>)
+
     作者：Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, Baining Guo
 
     团队：Microsoft Research Asia
@@ -156,7 +159,7 @@
 
     （1）**VanillaNet**
 
-    ![VanillaNet结构图](Images/VanillaNet.png)
+    ![VanillaNet结构图](../Images/HackingYOLO_README/VanillaNet.png)
 
     作者：Hanting Chen, Yunhe Wang, Jianyuan Guo, Dacheng Tao
 
@@ -168,7 +171,8 @@
     
     （2）**CSwin Transformer (CVPR 2022)**
 
-     ![CSwin Transformer结构图](<Images/CSwin Transformer.png>)
+     ![CSwin Transformer结构图](<../Images/HackingYOLO_README/CSwin Transformer.png>)
+
     作者：Xiaoyi Dong, Jianmin Bao, Dongdong Chen, Weiming Zhang, Nenghai Yu, Lu Yuan, Dong Chen, Baining Guo
 
     团队：University of Science and Technology of China; Microsoft Research Asia ;Microsoft Cloud + AI
@@ -181,7 +185,7 @@
 
     （1）**GFPN (DEMO-YOLO)**
     
-    ![GFPN结构图](<Images/DAMO-YOLO GFPN.png>)
+    ![GFPN结构图](<../Images/HackingYOLO_README/DAMO-YOLO GFPN.png>)
 
     作者：Xianzhe Xu, Yiqi Jiang, Weihua Chen, Yilun Huang, Yuan Zhang, Xiuyu Sun
 
@@ -195,7 +199,7 @@
 
     （1）**DynamicHead（DyHead）**
 
-     ![DynamicHead结构图](Images/DynamicHead(DyHead).png)
+     ![DynamicHead结构图](../Images/HackingYOLO_README/DynamicHead(DyHead).png)
      
     作者：Xiyang Dai, Yinpeng Chen, Bin Xiao, Dongdong Chen, Mengchen Liu, Lu Yuan, Lei Zhang
 
@@ -209,7 +213,7 @@
 
     （1）**CBAM**
 
-     ![CBAM结构图](Images/CBAM.png)
+     ![CBAM结构图](../Images/HackingYOLO_README/CBAM.png)
 
     作者：Sanghyun Woo, Jongchan Park, Joon-Young Lee, In So Kweon
 
@@ -219,7 +223,7 @@
 
     （2）**SE**
 
-     ![SE结构图](Images/SE.png)
+     ![SE结构图](../Images/HackingYOLO_README/SE.png)
 
     作者：Jie Hu, Li Shen, Samuel Albanie, Gang Sun, Enhua Wu
 
@@ -233,7 +237,7 @@
 
     （1）**上采样模块 EUCB（EMCAD）**
 
-     ![EUCB结构图](<Images/EMCAD EUCB.png>)
+     ![EUCB结构图](<../Images/HackingYOLO_README/EMCAD EUCB.png>)
 
     作者：Md Mostafijur Rahman, Mustafa Munir, Radu Marculescu
 
@@ -245,7 +249,7 @@
 
     （2）**卷积模块 C2f_CMUNeXtBlock（CMUNeXt）**
 
-     ![CMUNeXtBlock结构图](Images/CMUNeXt.png)
+     ![CMUNeXtBlock结构图](../Images/HackingYOLO_README/CMUNeXt.png)
 
     作者：Fenghe Tang, Jianrui Ding, Lingtao Wang, Chunping Ning, S. Kevin Zhou
 
