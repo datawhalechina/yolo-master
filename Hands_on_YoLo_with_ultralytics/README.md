@@ -45,6 +45,10 @@
     - 【DOTA-obb tutorial with yoloV11】 本章通过DOTAv1样例数据集演示如何在ultralytics项目中，实现**YOLOV11-n OBB模型**的训练及推理，来帮助学习者通过实操掌握对yolo系列模型的**进阶操作**。
     - 数据集来源于[**DOTA-v1.0**](https://captain-whu.github.io/DOTA/dataset.html)
 
+###  其他实践
+
+[YOLO V3 from scratch Notebook](../Pytorch_YoLo_From_Scratch/v3/YOLOv3_Hong.ipynb) 中对使用的coco8和coco128数据集进行了**探索性数据分析(EDA)**，大家可以优先查看.
+
 ###  本节参考资料
 
 - [ultralytics](https://github.com/ultralytics/ultralytics)
