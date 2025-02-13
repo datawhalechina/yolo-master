@@ -20,19 +20,16 @@
 **2.** 下面图片为BottleNeck1模块的结构图
 
 <img src="./image/bottleneck1.png" alt="图片描述" width="300" />
+<img src="./image/bottleneck1.png" alt="图片描述" width="300" />
 
 **3.** 下面图片为BottleNeck2模块的结构图
 
+<img src="./image/bottleneck2.png" alt="图片描述" width="300" />
 <img src="./image/bottleneck2.png" alt="图片描述" width="300" />
 
 **4.** 下面图片为SPPF模块的结构图
 
 <img src="./image/SPPF.png" alt="图片描述" width="600" />
-
-**5.** 下面图片为Upsample模块的结构图
-
-<img src="./image/Upsample模块.png" alt="图片描述" width="300" />
-
 
 ## 其他实践
 
