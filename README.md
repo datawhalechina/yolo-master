@@ -24,8 +24,7 @@
 
 ### 第一部分 YOLO 全系列模型详解 ###
 
-1. [YOLOv1-YOLO11概述](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd) @程宏 @彭彩平 
-   -  [YOLO系列模型的研究者/开发者趣闻和谣言(**WIP**)](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd#UAHidbJDkoPaiaxDwBGcq7qInsg) @ 张小白
+1. [【鸟瞰YOLO系列模型】YOLOV1-V11概述汇总与发布时间线](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd) @程宏 @彭彩平 @ 张小白 
      
 2. [YOLOv1详解](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf) @刘伟鸿
 
