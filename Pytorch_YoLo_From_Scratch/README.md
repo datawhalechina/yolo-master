@@ -1,12 +1,10 @@
 # YoLo Master
 
-![image](https://github.com/user-attachments/assets/f23752e3-e440-4fd6-a2ee-33b64bdc6544)
+## YOLO Models from Scratch
 
-## YOLO Models from scratch
+本项目旨在采用**手撸YOLO模型**的方式，来带大家一起在**小型数据集上复现YOLO算法**，目前计划里打算对YOLO [**V1**](./v1/YOLOv1.ipynb)，[**V3**](./v3/YOLOv3.ipynb)，[**V5**](./v5/YOLOv5.ipynb)，V8等进行手撸。
 
-本项目旨在采用**手撸YOLO模型**的方式，来带大家一起在**小型数据集上复现YOLO算法**，目前计划里打算对YOLO V1，[**V3**](./v3/YOLOv3_Hong.ipynb)，[**V5**](./v5/YOLOv5_NetModel.ipynb)，V8等进行手撸。
-
-我们计划首先编写一套可以共用的数据 pipeline ( dataset , dataloader ), 最终采取较为统一的基于torch的简单算法接口，并进行在关键通用数据集上的精度对齐。
+我们计划首先编写一套可以共用的数据 pipeline ( **`dataset`** , **`dataloader`** ), 最终采取较为统一的基于 **Pytorch**的简单算法接口，并进行在关键通用数据集上的精度对齐。
 
 欢迎感兴趣的有算力的小伙伴加入我们, 一起手撸YOLO模型!!
 
@@ -18,22 +16,22 @@
 │   └── coco8.zip
 ├── resource
 ├── v1
+│   ├── README.md
+│   ├── configs.py
+│   ├── images
+│   ├── requirements.txt
+│   ├── scripts
+│   ├── transforms.py
+│   └── YOLOv1.ipynb
 ├── v3
+│   ├── README.md
 │   ├── YOLOv3.ipynb
 │   ├── config.py
 │   └── metrics
 └── v5
-    ├── C3模块.png
-    ├── ConBNSiLU.png
-    ├── Conv2d模块.png
-    ├── SPPF.png
-    ├── Upsample模块.png
-    ├── YOLOv5.png
-    ├── YOLOv5_NetModel.ipynb
-    ├── bottleneck1.png
-    ├── bottleneck2.png
-    ├── coco8
-    └── readme.md
+    ├── README.md
+    ├── YOLOv5.ipynb
+    └── image
 ```
 
 
@@ -60,7 +58,7 @@
 ### YOLO V3 from scratch
 
 
-[YOLO V3 from scratch Notebook](./v3/YOLOv3_Hong.ipynb) 中对使用的coco8和coco128数据集进行了**探索性数据分析(EDA)**，大家可以优先查看.
+[YOLO V3 from scratch Notebook](./v3/YOLOv3.ipynb) 中对使用的coco8和coco128数据集进行了**探索性数据分析(EDA)**，大家可以优先查看.
 
 内容大纲如下
 

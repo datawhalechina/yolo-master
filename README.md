@@ -2,21 +2,21 @@
 
 ## 项目简介
 
-- 本项目主要对yolo系列模型进行介绍，包括各版本模型的结构，进行的改进等
+- 本项目主要对YOLO系列模型进行介绍，包括各版本模型的结构，进行的创新、优化、改进等
 
-- 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，transformer等squence model之前的位置
+- 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，Transformer 等Squential Models 之前的位置
 
-- 本课程旨在帮助学习者们可以了解和掌握主要yolo模型的发展脉络，以期在各自的应用领域可以进一步创新并在自己的任务上达到较好的效果。
+- 本课程旨在帮助学习者们可以了解和掌握主要YOLO模型的发展脉络，以期在各自的应用领域可以进一步创新并在自己的任务上达到较好的效果。
 
-- [飞书白皮书规划文档](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg)
+- [**飞书白皮书规划文档**](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg)
 
-- [内测文档](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh) 
+- [**内测文档**](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh) 
 
 
 ## 项目受众
 
-- 本课程面向有一定的机器学习基础的，上过**deep learning**和**图像图形学课程**的学生、工程师或者研究者
-- 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics](https://github.com/chg0901/yolo_master/tree/main/Hands_on_YoLo_with_ultralytics)** )
+- 本课程面向有一定的机器学习基础的，上过**Deep Learning**和**图像图形学课程**的学生、工程师或者研究者
+- 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics 实操](https://github.com/chg0901/yolo_master/tree/main/Hands_on_YoLo_with_ultralytics)** )
 - 期待**手动实现YOLO算法（[From Scratch](https://github.com/chg0901/yolo_master/tree/main/Pytorch_YoLo_From_Scratch)）** 的学习者，将**YOLO系列模型应用到所在领域数据或者提高表现（[Hacking](https://github.com/chg0901/yolo_master/tree/main/Hacking_YoLo)）** 的工程师，研究者
 
 
@@ -24,7 +24,7 @@
 
 ### 第一部分 YOLO 全系列模型详解 ###
 
-1. [【鸟瞰YOLO系列模型】YOLOV1-V11概述汇总与发布时间线](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd) @程宏 @彭彩平 @ 张小白 
+1. [【鸟瞰YOLO系列模型】YOLOv1-v11概述汇总与发布时间线](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd) @程宏 @彭彩平 @ 张小白 
      
 2. [YOLOv1详解](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf) @刘伟鸿
 
@@ -55,7 +55,7 @@
 
 1. [YOLO系列算法的**数据集制作与整理**](https://wvet00aj34c.feishu.cn/docx/Tdv4d2ZpmoWX4vxPPhfcvEIQnLh) @程宏
 
-2. YOLO系列算法实操教程 
+2. YOLO系列算法**实操教程** 
    1. YOLO系列**入门**教程 @程宏 @余霆嵩
       1. [教程文档](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD)  
       2. [教程代码](./Hands_on_YoLo_with_ultralytics\0-dog-breed-detection)
@@ -68,14 +68,15 @@
       1. [教程文档](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)
       2. [教程代码](./Hacking_YoLo)
 
-3. [YOLO系列算法从零开始实现教程](./Pytorch_YoLo_From_Scratch) @刘伟鸿 @程宏 @蔡鋆捷 
+3. [**YOLO系列算法从零开始实现教程**](./Pytorch_YoLo_From_Scratch) @刘伟鸿 @程宏 @蔡鋆捷 
 
-   1. **V1** (**WIP**) [Notebook](./Pytorch_YoLo_From_Scratch/v3/YOLOv3_Hong.ipynb)
-   2. **V3** [Notebook](./Pytorch_YoLo_From_Scratch/v3/YOLOv3_Hong.ipynb)
-   3. **V5** [Notebook](./Pytorch_YoLo_From_Scratch/v5/YOLOv5_NetModel.ipynb)
+   1. **YOLOv1** [Notebook](./Pytorch_YoLo_From_Scratch/v1/YOLOv1.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v1/README.md)
+   2. **YOLOv3** [Notebook](./Pytorch_YoLo_From_Scratch/v3/YOLOv3.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v3/README.md)
+   3. **YOLOv5** [Notebook](./Pytorch_YoLo_From_Scratch/v5/YOLOv5.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v5/README.md)
 
-4. YOLO系列算法的硬件部署
-   - 香橙派AIPro实现YOLOv5 (**WIP**) @张小白
+4. [YOLO系列模型的硬件部署与量化](https://wvet00aj34c.feishu.cn/docx/Oo71d5TjWoIzVPxaSIIc1Fysnqh)
+   - 使用香橙派AIPro实现YOLOv5目标检测 @张小白
+   - 使用Jetson Nano B01实现YOLOv4目标检测 @张小白
 
 
 
@@ -91,22 +92,18 @@
 │   ├── C6 其他
 │   └── README.md
 ├── Hands_on_YoLo_with_ultralytics # 基于ultralytics的应用实践教程
-│   ├── 0-dog-breed-detection        # 入门
-│   ├── 1-DOTA-obb                   # 进阶OBB任务
+│   ├── 0-dog-breed-detection        # # 入门
+│   ├── 1-DOTA-obb                   # # 进阶OBB任务
 │   └── README.md
 ├── Pytorch_YoLo_From_Scratch      # YOLO系列模型从零开始实现教程
 │   ├── README.md
-│   ├── datasets                     # 采用coco demo数据集
+│   ├── datasets                     # # 采用coco demo数据集
 │   │   ├── coco128.zip
 │   │   └── coco8.zip
 │   ├── resource
-│   ├── v1
-│   ├── v3
-│   │   ├── README.md
-│   │   ├── YOLOv3_Hong.ipynb        # 含有一定的探索性数据分析(EDA)，大家可以按需查看
-│   │   ├── config.py
-│   │   └── metrics
-│   └── v5
+│   ├── v1                           # # 使用VOC数据集
+│   ├── v3                           # # 使用COCO toy数据集
+│   └── v5                           # # 使用COCO toy数据集
 ├── README.md
 ├── Images
 └── docs
@@ -125,13 +122,13 @@
 | [余霆嵩](https://github.com/TingsongYu)| 项目负责人、代码审核与优化、ultralytics高阶实践教程 | DataWhale意向成员 |
 | [白雪城](https://github.com/JackBaixue) | 项目负责人、发起者、魔改负责人 | DataWhale成员 |
 | [徐韵婉](https://github.com/) | 项目负责人、发起者、飞书 | DataWhale成员 |
-| [刘伟鸿](https://github.com/Weihong-Liu) |V1详解，V1 Scratch(**WIP**) | DataWhale成员 |
+| [刘伟鸿](https://github.com/Weihong-Liu) |V1详解，V1 Scratch | DataWhale成员 |
 | [胡博毓](https://github.com/HuBoyu021124) | 魔改教程 | DataWhale成员 |
 | [谢彩承](https://github.com/YoungBossX) | 魔改教程 |DataWhale意向成员 |
 | [陈国威](https://github.com/gomevie) | V6、V9、V10详解 |DataWhale意向成员  |
 | [彭彩平](https://github.com/caipingpeng) | YOLO11详解 | |
 | [全政宇](https://github.com/EdQinHUST) |V9、V10 Review，YOLOX详解(**WIP**)| DataWhale意向成员  |
-| [张小白](https://www.zhihu.com/people/zhanghui_china) | YOLO系列模型趣闻和谣言(**WIP**)， 硬件部署（香橙派AIPro实现YOLOv5）(**WIP**)|DataWhale意向成员  |
+| [张小白](https://www.zhihu.com/people/zhanghui_china) | YOLO系列模型趣闻和谣言， 硬件部署（香橙派AIPro实现YOLOv5、Jetson Nano B01实现YOLOv4）|DataWhale意向成员  |
 
 
 ## 参与贡献

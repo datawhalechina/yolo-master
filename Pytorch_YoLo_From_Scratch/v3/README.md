@@ -1,16 +1,16 @@
 # YoLo Master
 
-## YOLO Models from scratch
+## YOLO Models from Scratch
 
-本项目旨在采用**手撸YOLO模型**的方式，来带大家一起在**小型数据集上复现YOLO算法**，目前计划里打算对YOLO V1，[**V3**](./YOLOv3_Hong.ipynb)，[**V5**](../v5/YOLOv5_NetModel.ipynb)，V8等进行手撸。
+本项目旨在采用**手撸YOLO模型**的方式，来带大家一起在**小型数据集上复现YOLO算法**，目前计划里打算对YOLO [**V1**](../v1/YOLOv1.ipynb)，[**V3**](../v3/YOLOv3.ipynb)，[**V5**](../v5/YOLOv5.ipynb)，V8等进行手撸。
 
-我们计划首先编写一套可以共用的数据 pipeline ( dataset , dataloader ), 最终采取较为统一的基于torch的简单算法接口，并进行在关键通用数据集上的精度对齐。
+我们计划首先编写一套可以共用的数据 pipeline ( **`dataset`** , **`dataloader`** ), 最终采取较为统一的基于 **Pytorch**的简单算法接口，并进行在关键通用数据集上的精度对齐。
 
 欢迎感兴趣的有算力的小伙伴加入我们, 一起手撸YOLO模型!!
 
-## YOLO V3 from scratch
+### YOLO V3 from scratch
 
-[YOLO V3 from scratch Notebook](./YOLOv3_Hong.ipynb) 中对使用的coco8和coco128数据集进行了**探索性数据分析(EDA)**，大家可以根据自己需要查看.
+[YOLO V3 from scratch Notebook](./YOLOv3.ipynb) 中对使用的coco8和coco128数据集进行了**探索性数据分析(EDA)**，大家可以根据自己需要查看.
 
 内容大纲如下
 
@@ -53,7 +53,7 @@
         - 问题
         - plot_training_metrics
 
-##  本节参考资料
+###  本节参考资料
 
 - [YOLOv3-Object-Detection-from-Scratch](https://github.com/williamcfrancis/YOLOv3-Object-Detection-from-Scratch/blob/main/YOLO_object_detection.ipynb)
 - [YOLOv3-in-PyTorch](https://github.com/westerndigitalcorporation/YOLOv3-in-PyTorch/blob/release/src/model.py)
