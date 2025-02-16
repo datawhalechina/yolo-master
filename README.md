@@ -116,7 +116,7 @@
 ## 贡献者名单
 
 | 姓名 | 职责 | 简介 |
-| :----| :---- | :---- |
+| :-------| :---- | :---- |
 | [程宏](https://github.com/chg0901) | 项目主负责人、统筹项目、发起者、代码教程初审 | DataWhale意向成员 |
 | [蔡鋆捷](https://github.com/xinala-781) | 项目主负责人、内测负责人、详解核心贡献者 | DataWhale意向成员 |
 | [余霆嵩](https://github.com/TingsongYu)| 项目负责人、代码审核与优化、ultralytics高阶实践教程 | DataWhale意向成员 |
@@ -128,7 +128,7 @@
 | [陈国威](https://github.com/gomevie) | V6、V9、V10详解 |DataWhale意向成员  |
 | [彭彩平](https://github.com/caipingpeng) | YOLO11详解 | |
 | [全政宇](https://github.com/EdQinHUST) |V9、V10 Review，YOLOX详解(**WIP**)| DataWhale意向成员  |
-| [张小白](https://www.zhihu.com/people/zhanghui_china) | YOLO系列模型趣闻和谣言， 硬件部署（香橙派AIPro实现YOLOv5、Jetson Nano B01实现YOLOv4）|DataWhale意向成员  |
+| [张小白](https://www.zhihu.com/people/zhanghui_china) | YOLO系列模型趣闻和谣言， 硬件部署教程|DataWhale意向成员  |
 
 
 ## 参与贡献
