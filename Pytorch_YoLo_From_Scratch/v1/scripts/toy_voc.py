@@ -1,28 +1,31 @@
 import os
 import shutil
 import pandas as pd
+import argparse
 from tqdm import tqdm
 
-# 配置参数
-SOURCE_VOC_DIR = "data/voc/VOC_Detection"  # VOC数据集的原始路径
-TARGET_VOC_DIR = "data/voc/small_voc"  # 目标小型VOC数据集的路径
-SELECTED_CLASSES = {"car", "bus", "person"}  # 需要筛选的目标类别
-SPLITS = ["train", "test"]  # 数据集划分
+# 解析命令行参数
+def parse_args():
+    parser = argparse.ArgumentParser(description="Filter and copy VOC dataset based on selected classes.")
+    parser.add_argument("--source_voc", type=str, required=True, help="Path to the original VOC dataset.")
+    parser.add_argument("--target_voc", type=str, required=True, help="Path to the target small VOC dataset.")
+    parser.add_argument("--classes", type=str, required=True, help="Comma-separated list of selected object classes.")
+    return parser.parse_args()
 
 # 确保目标目录结构存在
-def ensure_dirs():
-    for split in SPLITS:
-        os.makedirs(os.path.join(TARGET_VOC_DIR, split, "images"), exist_ok=True)
-        os.makedirs(os.path.join(TARGET_VOC_DIR, split, "targets"), exist_ok=True)
+def ensure_dirs(target_voc_dir, splits):
+    for split in splits:
+        os.makedirs(os.path.join(target_voc_dir, split, "images"), exist_ok=True)
+        os.makedirs(os.path.join(target_voc_dir, split, "targets"), exist_ok=True)
 
 # 复制筛选后的图片和CSV文件
-def filter_and_copy():
-    for split in SPLITS:
-        images_dir = os.path.join(SOURCE_VOC_DIR, split, "images")
-        targets_dir = os.path.join(SOURCE_VOC_DIR, split, "targets")
+def filter_and_copy(source_voc_dir, target_voc_dir, selected_classes, splits):
+    for split in splits:
+        images_dir = os.path.join(source_voc_dir, split, "images")
+        targets_dir = os.path.join(source_voc_dir, split, "targets")
         
-        target_images_dir = os.path.join(TARGET_VOC_DIR, split, "images")
-        target_targets_dir = os.path.join(TARGET_VOC_DIR, split, "targets")
+        target_images_dir = os.path.join(target_voc_dir, split, "images")
+        target_targets_dir = os.path.join(target_voc_dir, split, "targets")
         
         # 遍历所有标注文件
         for csv_file in tqdm(os.listdir(targets_dir), desc=f"Processing {split}"):
@@ -30,7 +33,7 @@ def filter_and_copy():
             df = pd.read_csv(csv_path)
             
             # 筛选目标类别
-            filtered_df = df[df['object'].isin(SELECTED_CLASSES)]
+            filtered_df = df[df['object'].isin(selected_classes)]
             
             if not filtered_df.empty:
                 # 复制图片
@@ -45,6 +48,12 @@ def filter_and_copy():
                 filtered_df.to_csv(dst_csv_path, index=False)
 
 if __name__ == "__main__":
-    ensure_dirs()
-    filter_and_copy()
+    args = parse_args()
+    source_voc_dir = args.source_voc
+    target_voc_dir = args.target_voc
+    selected_classes = set(args.classes.split(","))
+    splits = ["train", "test"]
+    
+    ensure_dirs(target_voc_dir, splits)
+    filter_and_copy(source_voc_dir, target_voc_dir, selected_classes, splits)
     print("Small VOC dataset created successfully!")
