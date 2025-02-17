@@ -46,7 +46,17 @@ pip install -r requirements.txt
 python3 simplify_voc_targets.py ./data/voc
 ```
 
+
+如果需要小数据集进行训练（可选）
+- --source_voc表示完整的voc原始数据的路径
+- --target_voc表示筛选过后的小数据集存储路径
+- --classes表示需要筛选的标签使用英文逗号隔开，例如： car,person,bus
+```
+python scripts/toy_voc.py --source_voc ./data/voc/VOC_Detection --target_voc ./data/voc/small_voc --classes car,person,bus
+```
+
 数据转换后的csv如下图所示：
+
 ![](images/data.png)
 
 
@@ -57,6 +67,8 @@ python3 simplify_voc_targets.py ./data/voc
 #### 训练细节
 
 采用默认的Config，第一个epoch耗时140s，156epoch大约需要6h。
+
+batch_size=64显存需要约14G。
 
 ```
 训练Epoch:   1%|          | 1/156 [02:20<6:02:08, 140.18s/epoch, 训练损失=7.125, 测试损失=4.574, 当前学习率=0.000500, 耗时=140.18s]
