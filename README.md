@@ -58,11 +58,11 @@
 2. YOLO系列算法**实操教程** 
    1. YOLO系列**入门**教程 @程宏 @余霆嵩
       1. [教程文档](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD)  
-      2. [教程代码](./Hands_on_YoLo_with_ultralytics\0-dog-breed-detection)
+      2. [教程代码](./Hands_on_YoLo_with_ultralytics/0-dog-breed-detection)
 
    2. YOLO系列算法**进阶**教程 @余霆嵩 @程宏 
       1. [教程文档](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf)
-      2. [教程代码](./Hands_on_YoLo_with_ultralytics\1-DOTA-obb)
+      2. [教程代码](./Hands_on_YoLo_with_ultralytics/1-DOTA-obb)
 
    3. YOLO系列算法**魔改**教程 @白雪城 @谢彩承 @胡博毓
       1. [教程文档](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)
