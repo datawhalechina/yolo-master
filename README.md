@@ -51,11 +51,11 @@
 
 ### 第二部分 YOLO 全系列教程 ###
 
-1. [YOLO Master--**学习YOLO的正确姿势**：从入门到"真香"的奇妙之旅 @林涛 @程宏](https://wvet00aj34c.feishu.cn/docx/U7YndF6zOo9Oi0xywBxcDvl7nNe) 
+1. [YOLO Master--**学习YOLO的正确姿势**：从入门到"真香"的奇妙之旅](https://wvet00aj34c.feishu.cn/docx/U7YndF6zOo9Oi0xywBxcDvl7nNe)  @林涛 @程宏
 
 2. [【**鸟瞰YOLO系列模型**】YOLOv1-v11概述汇总与**发布时间线**](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd) @程宏 @彭彩平 @ 张小白
 
-3. [YOLO系列算法的**基本原理与网络结构** @彭彩平 @程宏 @胡博毓](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh)
+3. [YOLO系列算法的**基本原理与网络结构**](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh) @彭彩平 @程宏 @胡博毓
 
 4. YOLO系列算法**实操教程** 
    1. YOLO系列**入门**教程 @程宏 @余霆嵩
@@ -82,7 +82,7 @@
    - 使用香橙派AIPro实现YOLOv5目标检测 @张小白
    - 使用Jetson Nano B01实现YOLOv4目标检测 @张小白
 
-8. [YOLO Master **ModelScope 模型上传教程** @张小白 @程宏](https://wvet00aj34c.feishu.cn/docx/VrZCdtOlvozI42xThc4cyxynnfg)
+8. [YOLO Master **ModelScope 模型上传教程**](https://wvet00aj34c.feishu.cn/docx/VrZCdtOlvozI42xThc4cyxynnfg) @张小白 @程宏
 
 ### 更多教程还在完成完善中（WIP）
 欢迎贡献者加入，一起完善教程~
@@ -114,7 +114,7 @@
 │   └── README.md
 ├── Pytorch_YoLo_From_Scratch      # YOLO系列模型从零开始实现教程
 │   ├── README.md
-│   ├── datasets                     # # 采用coco demo数据集
+│   ├── datasets                     # # 采用COCO demo数据集
 │   │   ├── coco128.zip
 │   │   └── coco8.zip
 │   ├── resource
@@ -151,7 +151,7 @@
 **YOLOMaster** 将和大家一起成长进步，让我们为共同推动项目**成为更专业、更高效、更易用的 YOLO 系列模型的开源学习教程**而努力！
 
 在此，我们诚挚感谢参与**第一批内测**([**文档**](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh) )的Reviewers
-以及已经贡献教程和代码、成为贡献者的小伙伴们（斜体字），
+以及已经贡献教程和代码、成为贡献者的小伙伴们（*斜体字*），
 也期待更多的小伙伴可以加入内测，有更多的小伙伴成为我们项目教程的贡献者！
 
 |Ver. No | Reviewer Name(s) |Notes|
