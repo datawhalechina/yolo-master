@@ -3,14 +3,9 @@
 ## 项目简介
 
 - 本项目主要对YOLO系列模型进行介绍，包括各版本模型的结构，进行的创新、优化、改进等
-
 - 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，Transformer 等Squential Models 之前的位置
-
 - 本课程旨在帮助学习者们可以了解和掌握主要YOLO模型的发展脉络，以期在各自的应用领域可以进一步创新并在自己的任务上达到较好的效果。
-
-- [**飞书白皮书规划文档**](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg)
-
-- [**内测文档**](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh) 
+- [**飞书白皮书规划文档**](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg)  [**内测文档**](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh) 
 
 
 ## 项目受众
