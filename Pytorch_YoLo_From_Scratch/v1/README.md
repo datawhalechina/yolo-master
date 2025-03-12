@@ -39,9 +39,12 @@ pip install -r requirements.txt
 #### PASCAL VOC 2007 + PASCAL VOC 2012 数据集
 要下载和准备 VOC 数据集，请按以下顺序运行脚本：
 
-
 ```
 ./download_voc.sh ./data/voc
+```
+如果使用这个 `download_voc.sh` shell脚本下载数据集很慢，可以从 [modelscope yolo_master/VOC0712](https://modelscope.cn/datasets/yolo_master/VOC0712/summary) 中下载数据集。
+
+```
 ./organize_voc.sh ./data/voc
 python3 simplify_voc_targets.py ./data/voc
 ```
@@ -60,9 +63,21 @@ python scripts/toy_voc.py --source_voc ./data/voc/VOC_Detection --target_voc ./d
 ![](images/data.png)
 
 
+### 模型下载
+
+可以从 [modelscope yolo_master/yolov1](https://modelscope.cn/models/yolo_master/yolov1/files) 中下载预训练模型 `pretrained_model_weights.pt` 及 本项目训练好的模型 `trained_model_weights.pt`。
+
+`configs.py` 中可以设置权重文件路径。
+```python
+PRETRAINED_MODEL_WEIGHTS = "checkpoints/pretrained_model_weights.pt"  # 预训练模型的权重文件路径。用于从已训练的模型恢复权重。
+TRAINING_CHECKPOINT_PATH = "checkpoints/training_checkpoint.pt"  # 训练过程中的检查点路径。训练过程中每隔一定步数会保存模型和优化器状态。
+TRAINED_MODEL_WEIGHTS = "checkpoints/trained_model_weights.pt"  # 最终训练好的模型权重保存路径。
+```
+
+
 ### [Notebook](./yolov1.ipynb)大纲
 
-![image](https://github.com/user-attachments/assets/d7141cd5-ba30-4ba6-9e71-b26db6dd524b)
+![image](images/大纲.png)
 
 #### 训练细节
 
