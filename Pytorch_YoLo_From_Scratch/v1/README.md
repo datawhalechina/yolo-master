@@ -40,13 +40,12 @@ pip install -r requirements.txt
 要下载和准备 VOC 数据集，请按以下顺序运行脚本：
 
 ```
-./download_voc.sh ./data/voc
-```
-如果使用这个 `download_voc.sh` shell脚本下载数据集很慢，可以从 [modelscope yolo_master/VOC0712](https://modelscope.cn/datasets/yolo_master/VOC0712/summary) 中下载数据集。
-
-```
-./organize_voc.sh ./data/voc
-python3 simplify_voc_targets.py ./data/voc
+# 下载数据集到 `./data/voc` 中，并解压 
+python scripts/download_voc.py ./data/voc 
+# 将数据集划分文件夹存放
+python scripts/organize_voc.py ./data/voc
+# 将 .xml 格式的目标标注文件转换成 .csv 格式
+python scripts/simplify_voc_targets.py ./data/voc
 ```
 
 
