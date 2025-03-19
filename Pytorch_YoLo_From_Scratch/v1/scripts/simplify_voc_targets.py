@@ -100,7 +100,7 @@ def simplify_targets(dataset_path: str) -> None:
                 os.remove(xml_path)
                 current_stat['deleted_xml'] += 1
                 
-                print(f"✓ 转换成功 | 有效目标: {valid_objs} | 跳过困难: {difficult_objs}")
+                print(f"转换成功 | 有效目标: {valid_objs} | 跳过困难: {difficult_objs}")
 
             except Exception as e:
                 print(f"! 处理失败: {xml_file}\n错误信息: {str(e)}")
