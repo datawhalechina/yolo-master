@@ -1,39 +1,36 @@
 import torch as th
 from torch.nn.functional import one_hot
+from torchvision import transforms
 import torchvision.transforms.functional as fT
-from PIL.Image import Image
+import PIL.Image as Image
 from typing import Tuple, Optional, List
 
 
 class Resize:
     """
-    A callable Resize class, which upon its call resizes the image and scales the bounding box coordinates
-    appropriately.
+    可调用的图像缩放类，在调用时会调整图像大小并相应缩放边界框坐标。
     """
 
     def __init__(self, output_size: int) -> None:
         """
-        Initialize the dimension d of the image after the transformation. After the image is resized, it will have a
-        (d x d) shape.
+        初始化变换后的图像维度d。图像变换后将具有(d x d)形状。
 
-        :param output_size: The dimension of the image after the transformation.
+        :param output_size: 变换后的图像维度。
         """
         self.d = output_size
 
-    def __call__(self, sample: Tuple[Image, th.Tensor]
-                 ) -> Tuple[Image, List[Tuple[float, float]], th.Tensor]:
+    def __call__(self, sample: Tuple[Image.Image, th.Tensor]
+                 ) -> Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]:
         """
-        Resize the image to a (d x d) shape and transform the bounding box coordinates.
-        In an image with N objects, the target tensor has a (N x 5)-shape and for each object the target is formatted
-        as  <classification_id>, <x_min>, <y_min>, <x_max>, <y_max>. Given an (h x w)-image, the x and y coordinates
-        are updated to x' and y' in the following way:
+        将图像调整为(d x d)形状并转换边界框坐标。
+        在包含N个对象的图像中，目标张量形状为(N x 5)，每个对象的格式为：
+        <分类ID>, <x_min>, <y_min>, <x_max>, <y_max>。对于(h x w)图像，坐标更新方式：
 
         | x' = x * d / w
         | y' = y * d / h
 
-        :param sample: A tuple containing the image and its corresponding target
-        :return: The resized (d x d) image, a mask that contains all the image pixels ([0,d] both in the x- and y-axis)
-                 and the appropriately scaled coordinates
+        :param sample: 包含图像及其对应目标的元组
+        :return: 调整后的图像、包含所有有效像素的掩码区域([0,d]范围)、缩放后的坐标
         """
         img, target = sample
         w, h = img.size
@@ -48,15 +45,12 @@ class Resize:
 
 class RandomScaleTranslate:
     """
-    A callable RandomScaleTranslate class, which resizes the image and scales the bounding box coordinates. In order to
-    augment the dataset, for each image we randomly choose between the following operations:
+    可调用随机缩放平移类，用于调整图像大小并转换边界框坐标。为增强数据集，对每张图像随机选择以下操作：
+    - 直接缩放
+    - 缩小后缩放
+    - 放大后缩放
 
-    - resize
-    - zoom out & resize
-    - zoom in & resize
-
-    When we zoom out, the image will be padded with zeros. To avoid distorting these zero values
-    (e.g. RandomColorJitter, normalization), a mask is returned to specify which values were padded.
+    当缩小图像时，会用零填充。为避免扭曲这些零值（如颜色抖动、归一化），返回掩码标识有效区域。
     """
     def __init__(self,
                  output_size: int,
@@ -65,45 +59,37 @@ class RandomScaleTranslate:
                  zoom_out_p: float,
                  zoom_in_p: float) -> None:
         """
-        Initialize the dimension d of the image after the transformation. After the image is resized, it will have a
-        (d x d) shape. The given jitter factor is also stored to randomly scale and translate the image.
-        The probabilities are used to select randomly one of the operations.
+        初始化变换后的图像维度d，存储抖动因子用于随机缩放平移，使用概率参数选择操作。
 
-        :param output_size: The dimension of the image after the transformation.
-        :param jitter: A factor to sample the random scale and translation for the zoom operations
-        :param resize_p: The probability that the 'resize' operation is applied
-        :param zoom_out_p: The probability that the 'zoom out & resize' operation is applied
-        :param zoom_in_p: The probability that the 'zoom in & resize' operation is applied
+        :param output_size: 变换后的图像维度
+        :param jitter: 控制随机缩放和平移的因子
+        :param resize_p: 直接缩放操作的概率
+        :param zoom_out_p: 缩小后缩放操作的概率
+        :param zoom_in_p: 放大后缩放操作的概率
         """
         self.d = output_size
         self.jitter = jitter
         self.t_probs = th.cumsum(th.Tensor([resize_p, zoom_out_p, zoom_in_p]), dim=0)
 
-    def __call__(self, sample: Tuple[Image, th.Tensor]
-                 ) -> Tuple[Image, List[Tuple[float, float]], th.Tensor]:
+    def __call__(self, sample: Tuple[Image.Image, th.Tensor]
+                 ) -> Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]:
         """
-        Sample from a uniform random distribution whether to apply the 'resize', 'zoom out & resize' or 'zoom in &
-        resize' operation. The probability of each operation is equal to the given corresponding value.
+        从均匀分布中采样决定执行哪个操作，调整图像尺寸并转换边界框坐标，返回掩码标识有效区域。
+        对于过小的边界框会进行移除。
 
-        In each case, the image is resized to a (d x d) shape and the bounding box coordinates are transformed
-        appropriately. A mask that specifies the bounds of the non-padded values of the image is also returned.
-        For the 'resize' and the 'zoom in & resize' operations, this mask contains all the pixel values of the image.
-
-        If a bounding box is very small after the transformation, it is removed from the targets.
-
-        :param sample: A tuple containing the image and its corresponding target
-        :return: A tuple containing the transformed image, its mask and the updated corresponding target
+        :param sample: 包含图像及其目标的元组
+        :return: 变换后的图像、掩码区域及更新后的目标
         """
 
         transform_prob = th.rand(1)
-        if transform_prob < self.t_probs[0]:                    # resize
+        if transform_prob < self.t_probs[0]:                    # 直接缩放
             img, mask, target = self._resize(sample)
-        elif transform_prob < self.t_probs[1]:                  # zoom out & resize
+        elif transform_prob < self.t_probs[1]:                  # 缩小后缩放
             img, mask, target = self._zoom_out(sample)
-        else:                                                   # zoom in & resize
+        else:                                                   # 放大后缩放
             img, mask, target = self._zoom_in(sample)
 
-        # Remove very small bounding boxes
+        # 移除过小的边界框
         bboxes_w = target[:, 3] - target[:, 1]
         bboxes_h = target[:, 4] - target[:, 2]
         threshold = 0.001 * self.d
@@ -111,21 +97,13 @@ class RandomScaleTranslate:
         target = target[valid_bboxes]
         return img, mask, target
 
-    def _resize(self, sample: Tuple[Image, th.Tensor]
-                ) -> Tuple[Image, List[Tuple[float, float]], th.Tensor]:
+    def _resize(self, sample: Tuple[Image.Image, th.Tensor]
+                ) -> Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]:
         """
-        This function follows the same logic with the __call__ function of the Resize class.
+        执行与Resize类相同的直接缩放逻辑。
 
-        Resize the image to a (d x d) shape and transform the bounding box coordinates.
-        In an image with N objects, the target tensor has a (N x 5)-shape and for each object the target is formatted
-        as  <classification_id>, <x_min>, <y_min>, <x_max>, <y_max>. Given an (h x w)-image, the x and y coordinates
-        are updated to x' and y' in the following way:
-
-        | x' = x * d / w
-        | y' = y * d / h
-
-        :param sample: A tuple containing the image and its corresponding target
-        :return: A tuple containing the resized image, its mask and the updated corresponding target
+        :param sample: 包含图像及其目标的元组
+        :return: 缩放后的图像、全尺寸掩码及更新后的目标
         """
         img, target = sample
         w, h = img.size
@@ -137,39 +115,17 @@ class RandomScaleTranslate:
         mask = [(0, self.d), (0, self.d)]
         return img, mask, target
 
-    def _zoom_out(self, sample: Tuple[Image, th.Tensor]
-                  ) -> Tuple[Image, List[Tuple[float, float]], th.Tensor]:
+    def _zoom_out(self, sample: Tuple[Image.Image, th.Tensor]
+                  ) -> Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]:
         """
-        First a new aspect ratio is set by sampling randomly from a uniform distribution rand_w and rand_h:
+        通过随机采样新宽高比实现缩小操作：
+        1. 计算新宽高比new_ar = rand_w / rand_h
+        2. 根据宽高比确定新尺寸(d, k)或(k, d)
+        3. 随机平移并填充图像
+        4. 转换坐标并生成掩码标识有效区域
 
-        - rand_w ~ U((1-jitter)w, (1+jitter)w)
-        - rand_h ~ U((1-jitter)h, (1+jitter)h)
-
-        and setting:
-         new_ar = rand_w / rand_h
-
-        We compare rand_w with rand_h and set the large dimension's size equal with d. The size of the other dimension
-        is calculated based on the aspect ratio. Therefore, the selected image patch has a size of (d, k) or (k,d) with
-        k <= 1.
-
-        Following this resize transformation, the image patch is randomly translated. To translate the image patch, we
-        pad the image with zeros:
-        - left and right, if the image patch has a width of k
-        - top and bottom, if the image patch has a height of k.
-
-        We randomly sample how many pixels are padded on the left or the top of the image from U(0, d-k). We also pad
-        the image with zeros on the right or the bottom to have a (d x d) shape.
-
-        The transformations that are applied to the coordinates of the image are:
-        1) resize from (w,h) to (d,k) or (k,d)
-        2) translate the image by the number of padded values on the left or the top of the image
-        Therefore, these transformations will be applied to the bounding box coordinates.
-
-        The mask of the transformed image will contain the bounds of the non-padded values with mask = [mask_x, mask_y]
-
-        :param sample: A tuple containing the image and its corresponding target
-        :return: A tuple containing the transformed image after the 'zoom out & resize' operation, its mask and the
-                 updated corresponding target
+        :param sample: 包含图像及其目标的元组
+        :return: 缩小后的图像、掩码区域及更新后的目标
         """
 
         img, target = sample
@@ -202,33 +158,16 @@ class RandomScaleTranslate:
         mask = [(dx, dx + nw), (dy, dy + nh)]
         return img, mask, target
 
-    def _zoom_in(self, sample: Tuple[Image, th.Tensor]
-                 ) -> Tuple[Image, List[Tuple[float, float]], th.Tensor]:
+    def _zoom_in(self, sample: Tuple[Image.Image, th.Tensor]
+                 ) -> Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]:
         """
-        First we sample the width and height of an image patch, nw and nh respectively, from a uniform random
-        distribution:
+        随机采样裁剪区域并放大：
+        1. 在原图上随机裁剪子区域
+        2. 将子区域缩放到目标尺寸
+        3. 移除不可见的边界框，裁剪部分可见的框进行坐标修正
 
-        - nw ~ U((1-jitter)w, w)
-        - nh ~ U((1-jitter)h, h)
-
-        Similarly we sample dx and dy to crop an image patch from the original image.
-
-        - dx ~ U(0, w-nw)
-        - dy ~ U(0, h-nh)
-
-        Following that, the selected image patch is resized to a (d x d) shape.
-
-        The bounding box coordinates are transformed in the following way:
-        1) the top, left coordinate of the image patch (dx, dy) must be translated to (0,0)
-        2) the image patch is resized from a size of (nw, nh) to (d, d)
-        The bounding boxes that are not visible after the transformation are completely removed from the targets, while
-        the bounding boxes that are only partially visible have their coordinates clamped to be within the image.
-
-        The mask of the transformed image will contain all the pixel values of the image in both the x- and y-axis.
-
-        :param sample: A tuple containing the image and its corresponding target
-        :return: A tuple containing the transformed image after the 'zoom in & resize' operation, its mask and the
-                 updated corresponding target
+        :param sample: 包含图像及其目标的元组
+        :return: 放大后的图像、全尺寸掩码及更新后的目标
         """
         img, target = sample
         w, h = img.size
@@ -245,11 +184,11 @@ class RandomScaleTranslate:
         target[:, [1, 3]] *= self.d / nw
         target[:, [2, 4]] *= self.d / nh
 
-        # Remove bounding boxes that are not visible any more
+        # 移除完全不可见的边界框
         target = target[th.logical_not(th.logical_or(th.logical_or(target[:, 3] < 0, target[:, 1] > self.d),
                                                      th.logical_or(target[:, 4] < 0, target[:, 2] > self.d)))]
 
-        # Update the bounds of the bounding boxes that are only partially visible
+        # 修正部分可见框的坐标
         target[:, [1, 2]] = target[:, [1, 2]].clamp(min=0)
         target[:, [3, 4]] = target[:, [3, 4]].clamp(max=self.d)
 
@@ -259,51 +198,36 @@ class RandomScaleTranslate:
 
 class RandomColorJitter:
     """
-    A callable RandomColorJitter class, which when called distorts the colors of the input image. The target values
-    remain unchanged.
+    可调用随机颜色抖动类，对输入图像进行颜色扭曲，目标值保持不变。
     """
 
     def __init__(self, hue: float, sat: float, exp: float):
         """
-        Initialize the hue, saturation and exposure parameters.
+        初始化色调、饱和度和曝光参数。
 
-        :param hue: The hue parameter. The hue value will be sampled uniformly at random from [-hue, hue].
-        :param sat: The saturation parameter. The saturation value will be sampled uniformly at random from [1/sat, sat]
-        :param exp: The exposure parameter. The exposure parameter will be sampled uniformly at random from [1/exp, exp]
+        :param hue: 色调参数，从[-hue, hue]均匀采样
+        :param sat: 饱和度参数，从[1/sat, sat]均匀采样
+        :param exp: 曝光参数，从[1/exp, exp]均匀采样
         """
         self.hue = hue
         self.sat = sat
         self.exp = exp
 
-    def __call__(self, sample: Tuple[Image, List[Tuple[float, float]], th.Tensor]
-                 ) -> Tuple[Image, List[Tuple[float, float]], th.Tensor]:
+    def __call__(self, sample: Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]
+                 ) -> Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]:
         """
-        Sample uniformly at random the hue, saturation and exposure values and distort the colors of the input image.
-        The hue, saturation and exposure of the image are adjusted in the HSV color space. Specifically:
+        在HSV空间调整颜色：
+        - 色调：加减随机值并循环处理
+        - 饱和度：乘以随机因子并截断
+        - 曝光：乘以随机因子并截断
 
-        HUE
-            pixel_H = pixel_H + rand_hue
-
-            if pixel_H > 1, then
-                pixel_H = pixel_H - 1
-            else if pixel_H < 0, then
-                pixel_H = pixel_H + 1
-
-        SATURATION
-            pixel_S = min(pixel_S * rand_sat, 1.0)
-
-        EXPOSURE
-            pixel_V = min(pixel_V * rand_exp, 1.0)
-
-        :param sample: A tuple containing the image, its mask and the corresponding target
-        :return: The distorted image and its (unchanged) target
+        :param sample: 包含图像、掩码及目标的元组
+        :return: 颜色调整后的图像及未变化的目标
         """
-        # Sample uniformly at random the hue, saturation and exposure values for this image.
         rand_hue = th.Tensor(1).uniform_(-self.hue, self.hue)
         rand_sat = th.Tensor(1).uniform_(1 / self.sat, self.sat)
         rand_exp = th.Tensor(1).uniform_(1 / self.exp, self.exp)
 
-        # Convert the RGB PIL image to an HSV tensor.
         rgb_img, mask, target = sample
         hsv_img = rgb_img.convert('HSV')
         hsv_tensor = fT.to_tensor(hsv_img)
@@ -311,19 +235,18 @@ class RandomColorJitter:
         mask_x, mask_y = mask
         masked_hsv_tensor = hsv_tensor[:, mask_y[0]:mask_y[1], mask_x[0]:mask_x[1]]
 
-        # Adjust hue
+        # 调整色调
         masked_hsv_tensor[0, :, :] += rand_hue
         masked_hsv_tensor[0, :, :] += (1. * (masked_hsv_tensor[0, :, :] < 0) - 1. * \
                                        (masked_hsv_tensor[0, :, :] > 1)) * th.ones_like(masked_hsv_tensor[0, :, :])
-        # Adjust saturation
+        # 调整饱和度
         masked_hsv_tensor[1, :, :] *= rand_sat
         masked_hsv_tensor[1, :, :] = masked_hsv_tensor[1, :, :].clamp(max=1.0)
 
-        # Adjust exposure
+        # 调整曝光
         masked_hsv_tensor[2, :, :] *= rand_exp
         masked_hsv_tensor[2, :, :] = masked_hsv_tensor[2, :, :].clamp(max=1.0)
 
-        # Convert the HSV tensor to an RGB PIL image
         hsv_img = fT.to_pil_image(hsv_tensor, mode='HSV')
         rgb_img = hsv_img.convert('RGB')
 
@@ -332,28 +255,23 @@ class RandomColorJitter:
 
 class RandomHorizontalFlip:
     """
-    A callable RandomHorizontalFlip class. When called, it is randomly chosen whether the image is flipped horizontally.
-    When the image is  flipped, the bounding box coordinates and the mask are also transformed appropriately.
+    可调用随机水平翻转类，随机决定是否翻转图像，同时调整边界框坐标和掩码。
     """
     def __init__(self, p: float) -> None:
         """
-        Initialize a RandomHorizontalFlip object and set the probability that the image is flipped.
+        初始化翻转概率。
 
-        :param p: The probability that the horizontal flip transformation is applied
+        :param p: 应用水平翻转的概率
         """
         self.p = p
 
-    def __call__(self, sample: Tuple[Image, List[Tuple[float, float]], th.Tensor]
-                 ) -> Tuple[Image, List[Tuple[float, float]], th.Tensor]:
+    def __call__(self, sample: Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]
+                 ) -> Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]:
         """
-        A number in [0,1) is randomly sampled from the uniform distribution U(0,1) to determine if the horizontal flip
-        transformation will be applied. The transformation is applied with probability p. If the image is flipped, the
-        xmin and xmax coordinates of the bounding boxes are updated. Furthermore, the mask's component in the x-axis
-        is also updated similarly.
+        按概率p翻转图像，调整x坐标并更新掩码。
 
-        :param sample: A tuple containing the image, its mask and the corresponding target
-        :return: If the transformation is applied, the horizontally flipped image, the transformed mask and the
-                 transformed target is returned. Otherwise, the input sample is returned.
+        :param sample: 包含图像、掩码及目标的元组
+        :return: 翻转后的图像或原始样本
         """
         apply_transform = th.rand(1) < self.p
         if not apply_transform:
@@ -373,46 +291,29 @@ class RandomHorizontalFlip:
 
 class ToYOLOTensor:
     """
-    A callable ToYOLOTensor class. When called the targets of the image will be transformed according to the YOLO
-    format, while the PIL image will be converted a Tensor. If the mean and the standard deviation of the input image
-    channels are provided, the Tensors are normalized.
+    可调用YOLO张量转换类，将目标转换为YOLO格式，图像转为张量，可选归一化。
     """
 
     def __init__(self, S: int, C: int, normalize: Optional[List] = None) -> None:
         """
-        Initialize the number of grid cells per row/column and the number of classes of the dataset.
+        初始化YOLO网格参数。
 
-        :param S: The S parameter of the YOLO algorithm. Each image is split into an (S x S) grid.
-        :param C: The number of classes of the dataset.
-        :param normalize: A list that contains two lists, one with the 3 mean values of the pixels per channel and
-                          another with the corresponding standard deviations per channel.
+        :param S: 网格尺寸（S x S）
+        :param C: 数据集类别数
+        :param normalize: 各通道的均值和标准差
         """
         self.S = S
         self.C = C
         self.normalize = normalize
 
-    def __call__(self, sample: Tuple[Image, List[Tuple[float, float]], th.Tensor]
+    def __call__(self, sample: Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]
                  ) -> Tuple[th.Tensor, th.Tensor]:
         """
-        The PIL image input is converted to a Tensor and the tensor is (optionally normalized).
-        In an image with N objects, the input target tensor has a (N x 5)-shape and for each object the target is
-        formatted as <classification_id>, <x_min>, <y_min>, <x_max>, <y_max>. The output target tensor has shape
-        (S x S x C+5). For each of the (S x S) cells of the grid:
+        转换目标为(SxS)网格格式：
+        - 每个单元格包含存在概率、one-hot类别、归一化中心坐标和尺寸
 
-        - index 0: 0 or 1 if an object exists in that cell
-        - indices [1,C]: one hot representation of the object in the cell or 0s everywhere
-        - index C+1: normalized center x-coordinate.
-        - index C+2: normalized center y-coordinate.
-        - index C+3: normalized width of the bounding box
-        - index C+4: normalized height of the bounding box
-
-        The center coordinates are normalized as offsets in the grid where the upper-left corner in the grid has
-        coordinates (0,0) and the bottom-right corner in the grid has coordinates (1,1).
-
-        The height and the width of the bounding boxes are normalized by the image height and width.
-
-        :param sample: A tuple containing the image, its mask and the corresponding target
-        :return: The given image and its target in a YOLO-grid format.
+        :param sample: 包含图像、掩码及目标的元组
+        :return: 图像张量和YOLO格式目标
         """
         img, mask, target = sample
         w, h = img.size
@@ -455,29 +356,24 @@ class ToYOLOTensor:
 
 class ImgToTensor:
     """
-        A callable ImgToTensor class. When called the PIL image will be converted a Tensor. If the mean and the standard
-        deviation of the input image channels are provided, the Tensors are normalized.
-        """
+    可调用图像张量转换类，将PIL图像转为张量，可选归一化。
+    """
 
     def __init__(self, normalize: Optional[List] = None) -> None:
         """
-        Initialize the number of grid cells per row/column and the number of classes of the dataset.
+        初始化归一化参数。
 
-        :param S: The S parameter of the YOLO algorithm. Each image is split into an (S x S) grid.
-        :param C: The number of classes of the dataset.
-        :param normalize: A list that contains two lists, one with the 3 mean values of the pixels per channel and
-                          another with the corresponding standard deviations per channel.
+        :param normalize: 各通道的均值和标准差
         """
         self.normalize = normalize
 
-    def __call__(self, sample: Tuple[Image, List[Tuple[float, float]], th.Tensor]
+    def __call__(self, sample: Tuple[Image.Image, List[Tuple[float, float]], th.Tensor]
                  ) -> Tuple[th.Tensor, th.Tensor]:
         """
-        The PIL image input is converted to a Tensor and the tensor is (optionally normalized). The targets are not
-        modified.
+        转换图像为张量并应用归一化。
 
-        :param sample: A tuple containing the image and its corresponding target
-        :return: An image tensor and the corresponding targets.
+        :param sample: 包含图像及其目标的元组
+        :return: 图像张量及目标
         """
         img, mask, target = sample
 
@@ -488,3 +384,4 @@ class ImgToTensor:
                                                                                    mean=self.normalize[0],
                                                                                    std=self.normalize[1])
         return img_tensor, target
+        
