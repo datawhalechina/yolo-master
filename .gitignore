@@ -1,6 +1,6 @@
 # 忽略数据集文件夹
-docs/Pytorch_YoLo_From_Scratch/datasets/coco8
-docs/Pytorch_YoLo_From_Scratch/datasets/coco128
+docs/Pytorch_YoLo_From_Scratch/datasets/coco8/*
+docs/Pytorch_YoLo_From_Scratch/datasets/coco128/*
 
 
 # 忽略pycache文件夹
@@ -18,11 +18,11 @@ docs/Pytorch_YoLo_From_Scratch/v3/logs
 *.pth
 *.ckpt
 *.onnx
-*.csv
+# *.csv
 *.h5
 *.npy
 *.tar.gz
-*.zip
+# *.zip
 *.log
 *.cache
 *.pkl
