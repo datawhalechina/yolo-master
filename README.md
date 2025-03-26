@@ -5,15 +5,13 @@
 - 本项目主要对YOLO系列模型进行介绍，包括各版本模型的结构，进行的创新、优化、改进等
 - 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，Transformer 等Squential Models 之前的位置，默认学习者有一定的深度学习经历和经验
 - 本课程旨在帮助学习者们可以了解和掌握主要YOLO模型的发展脉络，以期在各自的应用领域可以进一步创新并在自己的任务上达到较好的效果
-- [**飞书白皮书规划文档**](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg) / [**内测文档**](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh) 
-
+- [**飞书白皮书规划文档**](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg) / [**内测文档**](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh)
 
 ## 项目受众
 
 - 本课程面向有一定的机器学习基础的，上过**Deep Learning**和**图像图形学课程**的学生、工程师或者研究者
-- 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics 实操](https://github.com/chg0901/yolo_master/tree/main/Hands_on_YoLo_with_ultralytics)** )
-- 期待**手动实现YOLO算法（[From Scratch](https://github.com/chg0901/yolo_master/tree/main/Pytorch_YoLo_From_Scratch)）** 的学习者，将**YOLO系列模型应用到所在领域数据或者提高表现（[Hacking](https://github.com/chg0901/yolo_master/tree/main/Hacking_YoLo)）** 的工程师，研究者
-
+- 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics 实操](docs\Hands_on_YoLo_with_ultralytics)** )
+- 期待**手动实现YOLO算法（[From Scratch](docs\Pytorch_YoLo_From_Scratch)）** 的学习者，将**YOLO系列模型应用到所在领域数据或者提高表现（[Hacking](docs\Hacking_YoLo)）** 的工程师，研究者
 
 ## 目录
 
@@ -31,7 +29,6 @@
 10. [YOLOv10详解](https://wvet00aj34c.feishu.cn/docx/VagAdssMbo7a3exoagOcXr8BnAh) @陈国威 @李欣桓
 11. [YOLO11详解](https://wvet00aj34c.feishu.cn/docx/ZUQ9d4LnmoYjv3xlBFTcprctnMg) @彭彩平
 12. [YOLOX详解](https://wvet00aj34c.feishu.cn/docx/RCtddoe1joep4HxpmAPcYYBgnNc) @全政宇
-
 
 ### 第二部分 YOLO 全系列教程 ###
 
@@ -52,12 +49,13 @@
 8. YOLO Master ModelScope 模型上传教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/VrZCdtOlvozI42xThc4cyxynnfg) @张小白 @程宏
 
 ### 更多教程还在完成完善中（WIP）
+
 欢迎贡献者加入，一起完善教程~
 
 1. [YOLO系列算法的基本原理与网络结构 @彭彩平 @程宏](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh)【WIP80%】本文档采用由大到小（概述-->功能分块），再由小到大（关键概念-->典型算法-->典型模块-->典型网络机构）的介绍逻辑
-2. [YOLO系列模型算法中的LOSS](https://wvet00aj34c.feishu.cn/docx/TGrYd5ttHonbzFxs1dgckacHnpb) 【WIP】总结用于优化的LOSS函数在YOLO系列模型算法中的应用和各版本中的异同和进化 @谭斐然 
-3. [YOLO系列模型之如何阅读ultralytics源码？](https://wvet00aj34c.feishu.cn/docx/K4d9d9B5KoaSPjxwOjXceBwKnih)【WIP】专为想尝试阅读ultralytics源码并准备尝试修改原模型的同学准备，希望能够帮助大家更好的阅读源码，可以在进行实战教程尝试前阅读 @谭斐然 
-4. [YOLO系列入门实操教程](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD)【ultralytics YOLOv8】【WIP】优化和github notebook移植对齐 @北有青空 
+2. [YOLO系列模型算法中的LOSS](https://wvet00aj34c.feishu.cn/docx/TGrYd5ttHonbzFxs1dgckacHnpb) 【WIP】总结用于优化的LOSS函数在YOLO系列模型算法中的应用和各版本中的异同和进化 @谭斐然
+3. [YOLO系列模型之如何阅读ultralytics源码？](https://wvet00aj34c.feishu.cn/docx/K4d9d9B5KoaSPjxwOjXceBwKnih)【WIP】专为想尝试阅读ultralytics源码并准备尝试修改原模型的同学准备，希望能够帮助大家更好的阅读源码，可以在进行实战教程尝试前阅读 @谭斐然
+4. [YOLO系列入门实操教程](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD)【ultralytics YOLOv8】【WIP】优化和github notebook移植对齐 @北有青空
 5. [YOLO系列模型之如何阅读PP-YOLOE源码](https://wvet00aj34c.feishu.cn/docx/NvFwdZtD1owgx5xh6Enct1HcnLe)【WIP】基于国产深度学习框架PaddlePaddle的算法库PaddleDetection
 6. [PP-YOLOE详解](https://wvet00aj34c.feishu.cn/docx/F00CdJXU2ozAxixhCoLcu9v7nbh)【WIP】PP-YOLOE模型的详解
 7. [PP-YOLOE系列模型实践](https://wvet00aj34c.feishu.cn/docx/SxDodzBUlosqABxqvSJc606Cn4f)【WIP】PP-YOLOE模型的实践
@@ -65,10 +63,9 @@
 9. [YOLO实践之在竞赛中YOLO系列模型的使用和优化](https://wvet00aj34c.feishu.cn/docx/HHMrda1C5oRSCQxImGbcuIKlnGf) 【WIP】
 10. [非YOLO系CV模型的研究进展](https://wvet00aj34c.feishu.cn/docx/OWOMdjUHuoM60HxrdOrc4G0YnTg)【WIP】
 
-
 ## Github 目录结构说明
 
-```
+```text
 .
 ├── Hacking_YoLo                   # 魔改教程
 │   ├── C1 主干（Backbone）
@@ -95,7 +92,6 @@
 └── docs
 ```
 
-
 ## 贡献者名单
 
 | 姓名 | 职责 | 简介 |
@@ -118,6 +114,7 @@
 注：项目负责人的实际贡献内容不能全部一一显示在列表中，感谢每一位负责人的付出和持续跟进。
 
 ### Reviewer List
+
 在 YOLO Master 项目的开发与优化过程中，各位 Reviewer 以严谨的专业态度、细致的审查意见及建设性反馈，
 为项目质量的提升提供了重要支持和宝贵建议，显著增强了教程项目知识体系的完善和合理，提高了学习时的用户体验。
 大家的专业洞察与耐心指导是YOLO Master项目持续迭代的基石，期待在未来开发和教程体系完善过程中继续与大家合作，
@@ -128,7 +125,7 @@
 也期待更多的小伙伴可以加入内测，有更多的小伙伴成为我们项目教程的贡献者！
 
 |Ver. No | Reviewer Name(s) |
-| :-------| :-------- | 
+| :-------| :-------- |
 |v1|*谢彩承*|
 |v2|*谢彩承* |
 |v3|[冯启洪](https://github.com/fqhyyds) (汕头大学)，*[谭斐然](https://github.com/frtanxidian)(DataWhale意向成员、西安电子科技大学)* |
@@ -142,7 +139,6 @@
 |v11|[冯启洪](https://github.com/fqhyyds) (汕头大学)，*李欣桓* |
 
 注：斜体人员为项目贡献者，期待更多的reviewer成为贡献者！
-
 
 ## 参与贡献
 
