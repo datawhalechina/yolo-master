@@ -67,29 +67,30 @@
 
 ```text
 .
-├── Hacking_YoLo                   # 魔改教程
-│   ├── C1 主干（Backbone）
-│   ├── C2 颈部（Neck）
-│   ├── C3 头部（Head）
-│   ├── C4 注意力机制（Attention）
-│   ├── C6 其他
-│   └── README.md
-├── Hands_on_YoLo_with_ultralytics # 基于ultralytics的应用实践教程
-│   ├── 0-dog-breed-detection        # # 入门
-│   ├── 1-DOTA-obb                   # # 进阶OBB任务
-│   └── README.md
-├── Pytorch_YoLo_From_Scratch      # YOLO系列模型从零开始实现教程
-│   ├── README.md
-│   ├── datasets                     # # 采用COCO demo数据集
-│   │   ├── coco128.zip
-│   │   └── coco8.zip
-│   ├── resource
-│   ├── v1                           # # 使用VOC数据集
-│   ├── v3                           # # 使用COCO toy数据集
-│   └── v5                           # # 使用COCO toy数据集
-├── README.md
-├── Images
-└── docs
+├── docs
+│   ├── Hacking_YoLo                      # 魔改教程
+│   │   ├── C1 主干（Backbone）
+│   │   ├── C2 颈部（Neck）
+│   │   ├── C3 头部（Head）
+│   │   ├── C4 注意力机制（Attention）
+│   │   ├── C6 其他
+│   │   └── README.md
+│   ├── Hands_on_YoLo_with_ultralytics    # 基于ultralytics的应用实践教程
+│   │   ├── 0-dog-breed-detection         # # 入门 YOLOv8m
+│   │   ├── 1-DOTA-obb                    # # 进阶OBB任务 YOLOv11n 
+│   │   ├── 2-Beverages-Labeling          # # 高阶数据集操作
+│   │   └── README.md
+│   ├── Images
+│   └── Pytorch_YoLo_From_Scratch         # YOLO系列模型从零开始实现教程
+│       ├── datasets                      # # 采用COCO demo数据集
+│       │   ├── coco128.zip
+│       │   └── coco8.zip
+│       ├── README.md
+│       ├── resource
+│       ├── v1                            # # YOLOv1使用VOC数据集
+│       ├── v3                            # # YOLOv3使用COCO toy数据集
+│       └── v5                            # # YOLOv5使用COCO toy数据集
+└── README.md
 ```
 
 ## 贡献者名单
