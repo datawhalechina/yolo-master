@@ -1,12 +1,10 @@
-import os  # 引入os模块，用于文件路径操作
-import glob  # 引入glob模块，用于查找文件
+import os  
+import glob  
 
 def main():
-    # 定义数据集路径
-    drink_dataset_path = ""  # 填写你的DRINK_284_DETECTION_LABELME目录的根路径
-    drink_classes_path = ""  # 填写你的 DRINK_284_DETECTION_LABELME 的 classes.txt 路径
-    smart_goods_labels_path =  ""  # 填写你的鱼眼镜头_智能销售数据集的 labels.txt 路径
-    
+    drink_dataset_path = "./Drink_284_Detection_Labelme"  # 填写你的DRINK_284_DETECTION_LABELME目录的根路径
+    drink_classes_path = "./Drink_284_Detection_Labelme/classes.txt"  # 填写你的 DRINK_284_DETECTION_LABELME 的 classes.txt 路径
+    smart_goods_labels_path =  "./YOLO_datasets/labels.txt"  # 填写你的鱼眼镜头_智能销售数据集(YOLO格式)的 labels.txt 路径
     
     # 读取drink_dataset的类别列表
     with open(drink_classes_path, 'r', encoding='utf-8') as f:
@@ -46,7 +44,7 @@ def main():
         with open(label_file, 'r', encoding='utf-8') as f:  # 读取标签文件
             lines = f.readlines()
         
-        new_lines = []  # 存储更新后的标签行
+        new_lines = []
         for line in lines:
             new_lines_parts = line.strip().split() # 把标签文件中的每一行拆分成一个列表
             # 更新索引

@@ -88,14 +88,12 @@ def process_and_move_datasets_files(file_list, split_name):
                 w = (xmax - xmin) / width
                 h = (ymax - ymin) / height
 
-                f_txt.write(f"{cls_id} {x_center:.6f} {y_center:.6f} {w:.6f} {h:.6f}\n")  # 将标签写入txt文件
+                f_txt.write(f"{cls_id} {x_center:.6f} {y_center:.6f} {w:.6f} {h:.6f}\n")
 
         # 移动图片文件
-        src_img_path = os.path.join(voc_images_dir, img_file)  # 源文件路径
-        dst_img_path = os.path.join(yolo_images_dir, split_name, img_file)  # 目标文件路径
+        src_img_path = os.path.join(voc_images_dir, img_file)
+        dst_img_path = os.path.join(yolo_images_dir, split_name, img_file)
 
-        
-        #　复制文件
         try:
             if os.path.exists(src_img_path):
                 shutil.copy2(src_img_path, dst_img_path)

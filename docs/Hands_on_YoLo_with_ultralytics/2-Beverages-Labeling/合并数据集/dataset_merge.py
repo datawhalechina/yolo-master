@@ -3,11 +3,11 @@ import shutil
 import random
 
 # 设置随机种子
-random.seed(100)
+random.seed(100)  # 为了方便代码复现，我这里将随机种子设置为100
 
-drink_dataset_path = ""  # 填写你的DRINK_284_DETECTION_LABELME目录的根路径
-smart_goods_path = ""  # 填写你的鱼眼镜头_智能销售数据集的根路径
-new_dataset_path = ""  # 填写你的新数据集的根路径
+drink_dataset_path = "./Drink_284_Detection_Labelme"  # 填写你的DRINK_284_DETECTION_LABELME目录的根路径
+smart_goods_path = "./YOLO_datasets"  # 填写你的鱼眼镜头_智能销售数据集(YOLO格式)的根路径
+new_dataset_path = "./merged_dataset"  # 填写你的新数据集的根路径,这里以merged_dataset为例
 
 # 读取饮料数据集的类别列表
 with open(os.path.join(drink_dataset_path, 'classes.txt'), 'r') as f:
@@ -22,7 +22,7 @@ smart_goods_index_to_class = {str(idx): cls for idx, cls in enumerate(smart_good
 
 # 尽可能找出重合的类别
 common_classes = set(drink_classes).intersection(set(smart_goods_classes))  # 利用set的交集找出重合的类别
-print("重合的类别由", common_classes)
+print("重合的类别为", common_classes)
 
 # 创建饮料数据集的类别索引到类别名称的映射
 drink_index_to_class = {str(idx): cls for idx, cls in enumerate(drink_classes)}  # 创建一个字典，将类别索引映射到类别名称
@@ -103,9 +103,9 @@ drink_train_count = len(drink_train_images)
 drink_val_count = len(drink_val_images)
 print(f"饮料数据集的train数量:{drink_train_count},val数量:{drink_val_count}")
 
-# 抽取三倍于饮料数据集的样本
-smart_goods_train_extract_count = 3 * drink_train_count
-smart_goods_val_extract_count = 3 * drink_val_count
+# 抽取两倍于饮料数据集的样本
+smart_goods_train_extract_count = 2 * drink_train_count
+smart_goods_val_extract_count = 2 * drink_val_count
 print(f"需要从鱼眼镜头_智能销售数据集抽取的train数量:{smart_goods_train_extract_count}, val数量:{smart_goods_val_extract_count}")
 
 # 抽取鱼眼镜头_智能销售数据集的train和val样本
