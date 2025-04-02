@@ -1,0 +1,130 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# COCO128 dataset https://www.kaggle.com/datasets/ultralytics/coco128 (first 128 images from COCO train2017) by Ultralytics
+# Documentation: https://docs.ultralytics.com/datasets/detect/coco/
+# Example usage: yolo train data=coco128.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── coco128  ← downloads here (7 MB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../YOLO_datasets #改为你的数据集的根路径
+train: ../YOLO_datasets/images/train # 改为你的数据集中训练集的路径
+val: ../YOLO_datasets/images/val # 改为你的数据集中测试集的路径
+
+# Classes
+names:
+  0: 3+2-2
+  1: 3jia2
+  2: aerbeisi
+  3: anmuxi
+  4: aoliao
+  5: asamu
+  6: baicha
+  7: baishikele
+  8: baishikele-2
+  9: baokuangli
+  10: binghongcha
+  11: bingqilinniunai
+  12: bingtangxueli
+  13: buding
+  14: chacui
+  15: chapai
+  16: chapai2
+  17: damaicha
+  18: daofandian1
+  19: daofandian2
+  20: daofandian3
+  21: daofandian4
+  22: dongpeng
+  23: dongpeng-b
+  24: fenda
+  25: gudasao
+  26: guolicheng
+  27: guolicheng2
+  28: haitai
+  29: haochidian
+  30: haoliyou
+  31: heweidao
+  32: heweidao2
+  33: heweidao3
+  34: hongniu
+  35: hongniu2
+  36: hongshaoniurou
+  37: jianjiao
+  38: jianlibao
+  39: jindian
+  40: kafei
+  41: kaomo_gali
+  42: kaomo_jiaoyan
+  43: kaomo_shaokao
+  44: kaomo_xiangcon
+  45: kebike
+  46: kele
+  47: kele-b
+  48: kele-b-2
+  49: laotansuancai
+  50: liaomian
+  51: libaojian
+  52: lingdukele
+  53: lingdukele-b
+  54: liziyuan
+  55: lujiaoxiang
+  56: lujikafei
+  57: luxiangniurou
+  58: maidong
+  59: mangguoxiaolao
+  60: meiniye
+  61: mengniu
+  62: mengniuzaocan
+  63: moliqingcha
+  64: nfc
+  65: niudufen
+  66: niunai
+  67: nongfushanquan
+  68: qingdaowangzi-1
+  69: qingdaowangzi-2
+  70: qinningshui
+  71: quchenshixiangcao
+  72: rancha-1
+  73: rancha-2
+  74: rousongbing
+  75: rusuanjunqishui
+  76: suanlafen
+  77: suanlaniurou
+  78: taipingshuda
+  79: tangdaren
+  80: tangdaren2
+  81: tangdaren3
+  82: ufo
+  83: ufo2
+  84: wanglaoji
+  85: wanglaoji-c
+  86: wangzainiunai
+  87: weic
+  88: weitanai
+  89: weitanai2
+  90: weitanaiditang
+  91: weitaningmeng
+  92: weitaningmeng-bottle
+  93: weiweidounai
+  94: wuhounaicha
+  95: wulongcha
+  96: xianglaniurou
+  97: xianguolao
+  98: xianxiayuban
+  99: xuebi
+  100: xuebi-b
+  101: xuebi2
+  102: yezhi
+  103: yibao
+  104: yida
+  105: yingyangkuaixian
+  106: yitengyuan
+  107: youlemei
+  108: yousuanru
+  109: youyanggudong
+  110: yuanqishui
+  111: zaocanmofang
+  112: zihaiguo
