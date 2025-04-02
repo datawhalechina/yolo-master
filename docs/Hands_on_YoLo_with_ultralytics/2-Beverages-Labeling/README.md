@@ -1,4 +1,7 @@
 # 2-Beverages-Labeling
+![image](https://github.com/user-attachments/assets/3f46b897-1fee-4ac3-8a2f-92538ba60e32)
+![image](https://github.com/user-attachments/assets/6ec7848b-fb39-4087-9c86-c5b577fd2a25)
+
 
 ## 项目结构
 ```python
@@ -24,6 +27,10 @@
 - **[VOC_to_YOLO.py](./00-dataset/VOC_to_YOLO.py)**：**此脚本用于将 VOC 格式的数据集转换为 YOLO 格式。** 在实际应用中，不同来源的数据集可能采用不同的标注格式，VOC 是常见的一种，而 YOLO 训练需要特定的格式，该脚本解决了格式转换的问题。
 
 ### 合并数据集
+
+![image](https://github.com/user-attachments/assets/06e117c5-c651-43fa-bdad-60c97e3bb147)
+![image](https://github.com/user-attachments/assets/7e5801a9-fe8f-4ce2-b890-76882276e750)
+
 
 - **[dataset_merge.py](./01-data_merging/dataset_merge.py): 合并两个不同的饮料数据集**（*Drink_284_Detection_Labelme*和*鱼眼镜头_智能销售数据集*），处理类别重合问题，并保证数据集比例平衡。脚本优先选择包含重合类别的样本，确保模型能够学习到这些共享特征。
 
@@ -68,8 +75,14 @@
 
 ## 数据集和训练后的模型下载
 
-    YOLO Master 在魔搭社区建立了专门服务于 YOLO Master 项目的 ModelScope 组织，将会搬运 YOLO 各个版本的官方模型权重在这里备份，方便国内的学习者使用，也能支持贡献者们存放占用空间较大的实验结果和权重。
+> YOLO Master 在魔搭社区建立了专门服务于 YOLO Master 项目的 ModelScope 组织，将会搬运 YOLO 各个版本的官方模型权重在这里备份，方便国内的学习者使用，也能支持贡献者们存放占用空间较大的实验结果和权重。
 
-    YOLO Master ModelScope 组织地址：https://modelscope.cn/organization/yolo_master
+> YOLO Master ModelScope 组织地址：https://modelscope.cn/organization/yolo_master
 
 本教程的数据集，模型存放在 **[YOLO 实践之数据集合并与自动打标教程文件合集](https://www.modelscope.cn/collections/YOLO-shijianzhishujujihebingyuzi-54143625553f44)** 中，学习者可以通过访问上述链接获取所需资源。
+
+![image](https://github.com/user-attachments/assets/f039c2c6-c642-4ce2-a13e-0f57ad7c70d2)
+
+![image](https://github.com/user-attachments/assets/847bec8e-c842-4a33-83a4-f5e52c03f8be)
+
+
