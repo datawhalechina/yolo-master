@@ -1,5 +1,13 @@
 # 2-Beverages-Labeling
+
+在本章教程中，我们对选取的[鱼眼镜头_智能销售数据集](https://aistudio.baidu.com/datasetdetail/91732/0) 和[饮料数据集](https://zihao-download.obs.cn-east-3.myhuaweicloud.com/yolov8/datasets/Drink_284_Detection_Dataset/Drink_284_Detection_YOLO.zip)两个数据集作为示例数据集，来手把手的教大家如何进一步处理私有数据集并进行自动打标。以下为主要步骤和效果截图
+- 进行格式转化处理（VOC2YOLO）
+- 数据集的合并和采样
+- 训练自定义模型（YOLOv8m）
+- 结合打标工具 X-AnyLabeling 进行自动打标
+
 ![image](https://github.com/user-attachments/assets/3f46b897-1fee-4ac3-8a2f-92538ba60e32)
+
 ![image](https://github.com/user-attachments/assets/6ec7848b-fb39-4087-9c86-c5b577fd2a25)
 
 
@@ -29,6 +37,7 @@
 ### 合并数据集
 
 ![image](https://github.com/user-attachments/assets/06e117c5-c651-43fa-bdad-60c97e3bb147)
+
 ![image](https://github.com/user-attachments/assets/7e5801a9-fe8f-4ce2-b890-76882276e750)
 
 
