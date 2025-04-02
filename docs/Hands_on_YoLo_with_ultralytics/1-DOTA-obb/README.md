@@ -1,10 +1,5 @@
-#
 
 # YoLo Master
-
-![image](https://github.com/user-attachments/assets/f23752e3-e440-4fd6-a2ee-33b64bdc6544)
-
-## 
 
 ### 项目结构
 ```
