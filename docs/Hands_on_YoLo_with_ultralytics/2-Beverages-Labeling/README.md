@@ -48,7 +48,7 @@
 
 ### 00. 数据集格式转换
 
-运行 `./00-dataset/VOC_to_YOLO.p)`，将 VOC 格式的数据集转换为 YOLO 格式。
+运行 `./00-dataset/VOC_to_YOLO.py)`，将 VOC 格式的数据集转换为 YOLO 格式。
 
 ### 01. 数据集合并与标签更新
 
