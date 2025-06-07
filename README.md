@@ -3,13 +3,13 @@
 ## 项目简介
 
 - 本项目主要对YOLO系列模型进行介绍，包括各版本模型的结构，进行的创新、优化、改进等
-- 本课程内容，在传统的DL课程中，大致位于深度视觉模型里的ResNet之后，Transformer 等Squential Models 之前的位置，默认学习者有一定的深度学习经历和经验
-- 本课程旨在帮助学习者们可以了解和掌握主要YOLO模型的发展脉络，以期在各自的应用领域可以进一步创新并在自己的任务上达到较好的效果
+- 本课程内容，在传统的DL课程中，大致位于计算机视觉模型里的经典CV模型ResNet等之后，Transformer 等Squential Models 之前的位置
+- 本课程旨在帮助学习者们可以了解和掌握主要YOLO系列模型的发展脉络，以期在各自的应用领域可以进一步创新并在自己的任务上达到较好的效果。
 - [**飞书白皮书规划文档**](https://sxwqtaijh4.feishu.cn/docx/WNLJdo0wxoFPuExt6rbcvB8MnPg) / [**内测文档**](https://wvet00aj34c.feishu.cn/docx/FwivdWGqMoYQPSxMotMcYVIrnOh)
 
 ## 项目受众
 
-- 本课程面向有一定的机器学习基础的，上过**Deep Learning**和**图像图形学课程**的学生、工程师或者研究者
+- 本课程面向有一定的**机器学习基础**的，上过**Deep Learning**和**计算机图形学课程**的学生、工程师或者研究者
 - 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics 实操](docs\Hands_on_YoLo_with_ultralytics)** )
 - 期待**手动实现YOLO算法（[From Scratch](docs\Pytorch_YoLo_From_Scratch)）** 的学习者，将**YOLO系列模型应用到所在领域数据或者提高表现（[Hacking](docs\Hacking_YoLo)）** 的工程师，研究者
 
@@ -29,32 +29,37 @@
 10. [YOLOv10详解](https://wvet00aj34c.feishu.cn/docx/VagAdssMbo7a3exoagOcXr8BnAh) @陈国威 @李欣桓
 11. [YOLO11详解](https://wvet00aj34c.feishu.cn/docx/ZUQ9d4LnmoYjv3xlBFTcprctnMg) @彭彩平
 12. [YOLOX详解](https://wvet00aj34c.feishu.cn/docx/RCtddoe1joep4HxpmAPcYYBgnNc) @全政宇
+13. [YOLOV12详解](https://wvet00aj34c.feishu.cn/docx/WrBydq19boEHN7xhp7pcLxd7n6f) @程宏 @张辉
 
 ### 第二部分 YOLO 全系列教程 ###
 
 1. YOLO Master--学习YOLO的正确姿势：从入门到"真香"的奇妙之旅  [教程文档](https://wvet00aj34c.feishu.cn/docx/U7YndF6zOo9Oi0xywBxcDvl7nNe)  @林涛 @程宏
 2. 鸟瞰YOLO系列模型：YOLOv1-v11概述汇总与发布时间线  [教程文档](https://sxwqtaijh4.feishu.cn/docx/Yc40ddMGIo7nOyxSXVZc6KztnYd) @程宏 @彭彩平 @ 张小白
 3. YOLO系列算法的基本原理与网络结构  [教程文档](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh) @彭彩平 @程宏 @胡博毓
-4. YOLO系列算法实操教程  @程宏 @余霆嵩 @刘伟鸿 @李欣桓
-   1. YOLO系列入门教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD) / [教程代码](./Hands_on_YoLo_with_ultralytics/0-dog-breed-detection)
-   2. YOLO系列算法进阶教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf) / [教程代码](./Hands_on_YoLo_with_ultralytics/1-DOTA-obb)
-   3. YOLO实践之通用数据集格式介绍与私有数据集制作 [教程文档](https://wvet00aj34c.feishu.cn/docx/Tdv4d2ZpmoWX4vxPPhfcvEIQnLh)
-   4. YOLO实践之数据集合并与自动打标 [教程文档](https://wvet00aj34c.feishu.cn/docx/R04QdmQMMoaA44xyDYkcA0AfnOd)
-5. YOLO系列算法从零开始实现教程  [教程文档](./Pytorch_YoLo_From_Scratch) @刘伟鸿 @程宏 @蔡鋆捷 
+   1. YOLO系列模型算法中的LOSS [教程文档](https://wvet00aj34c.feishu.cn/docx/TGrYd5ttHonbzFxs1dgckacHnpb)  @谭斐然 @程宏 
+   2. YOLO系列算法原理之IoU总结  [教程文档](https://wvet00aj34c.feishu.cn/docx/UUj2dE5aJoAMRixH9bIc7yxin7e)  @彭彩平 
+   3. YOLO系列算法原理之典型网络模块（细节总结篇）  [教程文档](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh)  @彭彩平  
+4. YOLO系列算法实操教程  @程宏 @余霆嵩 @刘伟鸿 @李欣桓 @谭斐然
+   1. YOLO系列之如何阅读ultralytics源码？ [教程文档](https://wvet00aj34c.feishu.cn/docx/K4d9d9B5KoaSPjxwOjXceBwKnih) 
+   2. YOLO系列入门教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD) / [教程代码](./Hands_on_YoLo_with_ultralytics/0-dog-breed-detection)
+   3. YOLO系列算法进阶教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf) / [教程代码](./Hands_on_YoLo_with_ultralytics/1-DOTA-obb)
+   4. YOLO实践之通用数据集格式介绍与私有数据集制作 [教程文档](https://wvet00aj34c.feishu.cn/docx/Tdv4d2ZpmoWX4vxPPhfcvEIQnLh)
+   5. YOLO实践之数据集合并与自动打标 [教程文档](https://wvet00aj34c.feishu.cn/docx/R04QdmQMMoaA44xyDYkcA0AfnOd)
+5. YOLO系列算法魔改教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)  [教程代码](./Hacking_YoLo)  @白雪城 @谢彩承 @胡博毓
+6. YOLO系列模型的硬件部署与量化  [教程文档](https://wvet00aj34c.feishu.cn/docx/Oo71d5TjWoIzVPxaSIIc1Fysnqh)  @张小白 @白雪城 @程宏
+7. YOLO Master ModelScope 模型上传教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/VrZCdtOlvozI42xThc4cyxynnfg) @张小白 @程宏
+8. YOLO系列算法从零开始实现教程  [教程文档](./Pytorch_YoLo_From_Scratch) @刘伟鸿 @程宏 @蔡鋆捷 
    1. YOLOv1 [Notebook](./Pytorch_YoLo_From_Scratch/v1/YOLOv1.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v1/README.md)
    2. YOLOv3 [Notebook](./Pytorch_YoLo_From_Scratch/v3/YOLOv3.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v3/README.md)
    3. YOLOv5 [Notebook](./Pytorch_YoLo_From_Scratch/v5/YOLOv5.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v5/README.md)
-6. YOLO系列算法魔改教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)  [教程代码](./Hacking_YoLo)  @白雪城 @谢彩承 @胡博毓
-7. YOLO系列模型的硬件部署与量化  [教程文档](https://wvet00aj34c.feishu.cn/docx/Oo71d5TjWoIzVPxaSIIc1Fysnqh)  @张小白 @白雪城 @程宏
-8. YOLO Master ModelScope 模型上传教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/VrZCdtOlvozI42xThc4cyxynnfg) @张小白 @程宏
 
 ### 更多教程还在完成完善中（WIP）
 
 欢迎贡献者加入，一起完善教程~
 
-1. [YOLO系列算法的基本原理与网络结构 @彭彩平 @程宏](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh)【WIP80%】本文档采用由大到小（概述-->功能分块），再由小到大（关键概念-->典型算法-->典型模块-->典型网络机构）的介绍逻辑
-2. [YOLO系列模型算法中的LOSS](https://wvet00aj34c.feishu.cn/docx/TGrYd5ttHonbzFxs1dgckacHnpb) 【WIP】总结用于优化的LOSS函数在YOLO系列模型算法中的应用和各版本中的异同和进化 @谭斐然
-3. [YOLO系列模型之如何阅读ultralytics源码？](https://wvet00aj34c.feishu.cn/docx/K4d9d9B5KoaSPjxwOjXceBwKnih)【WIP】专为想尝试阅读ultralytics源码并准备尝试修改原模型的同学准备，希望能够帮助大家更好的阅读源码，可以在进行实战教程尝试前阅读 @谭斐然
+1. [YOLO系列算法的基本原理与网络结构 @彭彩平 @程宏](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh)【Done】本文档采用由大到小（概述-->功能分块），再由小到大（关键概念-->典型算法-->典型模块-->典型网络机构）的介绍逻辑
+2. [YOLO系列模型算法中的LOSS](https://wvet00aj34c.feishu.cn/docx/TGrYd5ttHonbzFxs1dgckacHnpb) 【Done】总结用于优化的LOSS函数在YOLO系列模型算法中的应用和各版本中的异同和进化 @谭斐然
+3. [YOLO系列模型之如何阅读ultralytics源码？](https://wvet00aj34c.feishu.cn/docx/K4d9d9B5KoaSPjxwOjXceBwKnih)【Done】专为想尝试阅读ultralytics源码并准备尝试修改原模型的同学准备，希望能够帮助大家更好的阅读源码，可以在进行实战教程尝试前阅读 @谭斐然
 4. [YOLO系列入门实操教程](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD)【ultralytics YOLOv8】【WIP】优化和github notebook移植对齐 @北有青空
 5. [YOLO系列模型之如何阅读PP-YOLOE源码](https://wvet00aj34c.feishu.cn/docx/NvFwdZtD1owgx5xh6Enct1HcnLe)【WIP】基于国产深度学习框架PaddlePaddle的算法库PaddleDetection
 6. [PP-YOLOE详解](https://wvet00aj34c.feishu.cn/docx/F00CdJXU2ozAxixhCoLcu9v7nbh)【WIP】PP-YOLOE模型的详解
