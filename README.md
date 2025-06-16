@@ -10,8 +10,8 @@
 ## 项目受众
 
 - 本课程面向有一定的**机器学习基础**的，上过**Deep Learning**和**计算机图形学课程**的学生、工程师或者研究者
-- 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics 实操](docs\Hands_on_YoLo_with_ultralytics)** )
-- 期待**手动实现YOLO算法（[From Scratch](docs\Pytorch_YoLo_From_Scratch)）** 的学习者，将**YOLO系列模型应用到所在领域数据或者提高表现（[Hacking](docs\Hacking_YoLo)）** 的工程师，研究者
+- 应用领域为基于YOLO的**目标检测**、**图像分类**、**图像分割**、**姿态检测**和**目标跟踪**(如 **[ultralytics 实操](./docs/Hands_on_YoLo_with_ultralytics)** )
+- 期待**手动实现YOLO算法（[From Scratch](./docs/Pytorch_YoLo_From_Scratch)）** 的学习者，将**YOLO系列模型应用到所在领域数据或者提高表现（[Hacking](./docs/Hacking_YoLo)）** 的工程师，研究者
 
 ## 目录
 
