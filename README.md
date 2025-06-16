@@ -41,17 +41,17 @@
    3. YOLO系列算法原理之典型网络模块（细节总结篇）  [教程文档](https://wvet00aj34c.feishu.cn/docx/MKUhdQ9CmoIcR2x2TXrcBfY5ndh)  @彭彩平  
 4. YOLO系列算法实操教程  @程宏 @余霆嵩 @刘伟鸿 @李欣桓 @谭斐然
    1. YOLO系列之如何阅读ultralytics源码？ [教程文档](https://wvet00aj34c.feishu.cn/docx/K4d9d9B5KoaSPjxwOjXceBwKnih) 
-   2. YOLO系列入门教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD) / [教程代码](./Hands_on_YoLo_with_ultralytics/0-dog-breed-detection)
-   3. YOLO系列算法进阶教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf) / [教程代码](./Hands_on_YoLo_with_ultralytics/1-DOTA-obb)
+   2. YOLO系列算法入门教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/Ojcfd0ZF5olk4Yxwt9ZcjgSenUD) / [教程代码](./docs/Hands_on_YoLo_with_ultralytics/0-dog-breed-detection)
+   3. YOLO系列算法进阶教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/U8STd5txXod1R5xhrrmcZh9fnTf) / [教程代码](./docs/Hands_on_YoLo_with_ultralytics/1-DOTA-obb)
    4. YOLO实践之通用数据集格式介绍与私有数据集制作 [教程文档](https://wvet00aj34c.feishu.cn/docx/Tdv4d2ZpmoWX4vxPPhfcvEIQnLh)
    5. YOLO实践之数据集合并与自动打标 [教程文档](https://wvet00aj34c.feishu.cn/docx/R04QdmQMMoaA44xyDYkcA0AfnOd)
-5. YOLO系列算法魔改教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)  [教程代码](./Hacking_YoLo)  @白雪城 @谢彩承 @胡博毓
+5. YOLO系列算法魔改教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/RXJKdo5ZJoT5QPxiV3vcpGPwnzX)  [教程代码](./docs/Hacking_YoLo)  @白雪城 @谢彩承 @胡博毓
 6. YOLO系列模型的硬件部署与量化  [教程文档](https://wvet00aj34c.feishu.cn/docx/Oo71d5TjWoIzVPxaSIIc1Fysnqh)  @张小白 @白雪城 @程宏
 7. YOLO Master ModelScope 模型上传教程  [教程文档](https://wvet00aj34c.feishu.cn/docx/VrZCdtOlvozI42xThc4cyxynnfg) @张小白 @程宏
 8. YOLO系列算法从零开始实现教程  [教程文档](./Pytorch_YoLo_From_Scratch) @刘伟鸿 @程宏 @蔡鋆捷 
-   1. YOLOv1 [Notebook](./Pytorch_YoLo_From_Scratch/v1/YOLOv1.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v1/README.md)
-   2. YOLOv3 [Notebook](./Pytorch_YoLo_From_Scratch/v3/YOLOv3.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v3/README.md)
-   3. YOLOv5 [Notebook](./Pytorch_YoLo_From_Scratch/v5/YOLOv5.ipynb) / [README](./Pytorch_YoLo_From_Scratch/v5/README.md)
+   1. YOLOv1 [Notebook](./docs/Pytorch_YoLo_From_Scratch/v1/YOLOv1.ipynb) / [README](./docs/Pytorch_YoLo_From_Scratch/v1/README.md)
+   2. YOLOv3 [Notebook](./docs/Pytorch_YoLo_From_Scratch/v3/YOLOv3.ipynb) / [README](./docs/Pytorch_YoLo_From_Scratch/v3/README.md)
+   3. YOLOv5 [Notebook](./docs/Pytorch_YoLo_From_Scratch/v5/YOLOv5.ipynb) / [README](./docs/Pytorch_YoLo_From_Scratch/v5/README.md)
 
 ### 更多教程还在完成完善中（WIP）
 
