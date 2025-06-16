@@ -106,18 +106,31 @@
 | [蔡鋆捷](https://github.com/xinala-781) | 项目主负责人、详解核心贡献者、组织内测 | DataWhale意向成员 |
 | [余霆嵩](https://github.com/TingsongYu)| 项目负责人、代码审核与优化 | DataWhale意向成员 |
 | [白雪城](https://github.com/JackBaixue) | 项目负责人、发起者、魔改负责人 | DataWhale成员 |
-| [彭彩平](https://github.com/caipingpeng) | 项目负责人、鸟瞰YOLO、基本原理与网络结构 | |
+| [彭彩平](https://github.com/caipingpeng) | 项目负责人、鸟瞰YOLO、**基本原理与网络结构** | |
 | [刘伟鸿](https://github.com/Weihong-Liu) | V1详解，V1 Scratch, 数据集制作 | DataWhale成员 |
 | [胡博毓](https://github.com/HuBoyu021124) | V8 Review，魔改教程, | DataWhale成员 |
 | [谢彩承](https://github.com/YoungBossX) | V1、V2、V5 Review，魔改教程 |DataWhale意向成员 |
-| [陈国威](https://github.com/gomevie) | V6、V9、V10详解 |DataWhale意向成员  |
-| [全政宇](https://github.com/EdQinHUST) |V9、V10 Review，YOLOX详解| DataWhale意向成员  |
-| [张小白](https://www.zhihu.com/people/zhanghui_china) | YOLO系列模型趣闻和谣言，硬件部署，ModelScope使用|DataWhale意向成员  |
-| [李欣桓](https://github.com/NorthBlueSky) |**V10**、V11 Review，数据集合并于打标 | 安徽理工大学  |
-| [胥佳程](https://github.com/Thedan-1) | **V4**、V5 Review | DataWhale意向成员、青岛科技大学|
+| [陈国威](https://github.com/gomevie) | V6、V9、V10详解 |DataWhale意向成员 |
+| [全政宇](https://github.com/EdQinHUST) |V9、V10 Review，YOLOX详解| DataWhale意向成员 |
+| [张小白](https://www.zhihu.com/people/zhanghui_china) | YOLO系列模型趣闻和谣言，硬件部署，ModelScope使用|DataWhale意向成员 |
+| [李欣桓](https://github.com/NorthBlueSky) |**V10**、V11 Review，**数据集合并与打标** | 安徽理工大学 |
+| [胥佳程](https://github.com/Thedan-1) | **V4**、V5 Review | DataWhale意向成员、青岛科技大学 |
+| [谭斐然](https://github.com/frtanxidian) | **YOLO系列模型算法中的LOSS**, **如何阅读ultralytics源码** |DataWhale意向成员 |
+| [林涛](www.lintao.online) | 学习YOLO的正确姿势 |DataWhale意向成员 |
 | 徐韵婉 | 发起者、飞书教程管理维护 | DataWhale成员 |
 
 注：项目负责人的实际贡献内容不能全部一一显示在列表中，感谢每一位负责人的付出和持续跟进。
+
+### 课程助教名单
+| 姓名 | 职责 | 课程日期 |
+| :-------| :---- | :---- |
+|[谭斐然](https://github.com/frtanxidian)|运营助教|2025.06|
+|[白雪城](https://github.com/JackBaixue)|专业助教|2025.06|
+|[佘圳鑫](https://github.com/)|专业助教|2025.06|
+
+感谢DataWhale组织的文睿，六一姐，马燕鹏，煜神，碧涵，晓皖和水琼以及其他小伙伴们的的协助与支持~
+
+
 
 ### Reviewer List
 
