@@ -27,3 +27,5 @@ docs/Pytorch_YoLo_From_Scratch/v3/logs
 *.cache
 *.pkl
 .DS_Store
+docs/Hands_on_YoLo_with_ultralytics/0-dog-breed-detection/data/*
+docs/Hands_on_YoLo_with_ultralytics/1-DOTA-obb/DOTAv1/*
