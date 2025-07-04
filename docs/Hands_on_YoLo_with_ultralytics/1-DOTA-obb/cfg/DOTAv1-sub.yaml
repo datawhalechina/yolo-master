@@ -8,7 +8,7 @@
 #     └── dota1  ← downloads here (2GB)
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: G:\deep_learning_data\DOTAv1\DOTA-sub-split-downsample # dataset root dir
+path: ./DOTAv1/DOTA-sub-split-downsample # dataset root dir
 train: images/train
 val: images/val
 test:
